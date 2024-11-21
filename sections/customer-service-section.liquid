@@ -1,0 +1,203 @@
+{% comment %}
+  Customer Service Section with Main Image Picker and Sub Section Images
+{% endcomment %}
+
+<div class="customer-service-section">
+  {% if section.settings.main_image %}
+    {{ section.settings.main_image | image_url: width: 1000 | image_tag: class: 'section-main-image', alt: 'Main Section Image' }}
+  {% endif %}
+  
+  <h2>{{ section.settings.title }}</h2>
+  <p class="subtitle">{{ section.settings.subtitle }}</p>
+  
+  <div class="team-images">
+    {% assign sub_images = "sub_image1,sub_image2,sub_image3,sub_image4" | split: ',' %}
+    {% for sub_image in sub_images %}
+      {% assign image_url = section.settings[sub_image] %}
+      {% if image_url %}
+        <div class="team-member"> 
+          {{ image_url | image_url: width: 80 | image_tag: class: 'slider-top-image-img', alt: 'Team member' }}
+        </div>
+      {% else %}
+        <p>No image provided</p>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="features">
+    {% for block in section.blocks %}
+      {% if block.type == 'feature' %}
+        <div class="feature">
+          {% if block.settings.icon_image %}
+            {{ block.settings.icon_image | image_url: width: 32 | image_tag: class: 'feature-icon', alt: 'Icon' }}
+          {% else %}
+            <i class="icon {{ block.settings.icon_class }}"></i>
+          {% endif %}
+          <p>{{ block.settings.feature_text }}</p>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+
+.customer-service-section {
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #f9f9f9;
+  margin: 0px;
+  padding: 40px 0px;
+}
+
+.customer-service-section .section-main-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.customer-service-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.customer-service-section .subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.team-images {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  width: 100vw;
+  margin-left: 0px;
+  gap: 24px;
+}
+
+.team-member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 150px;
+  text-align: center;
+}
+
+.feature img.feature-icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 10px;
+}
+
+.feature i {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 14px;
+  color: #333;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Customer Service Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Main Section Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "sub_image1",
+      "label": "Sub Section Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "sub_image2",
+      "label": "Sub Section Image 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "sub_image3",
+      "label": "Sub Section Image 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "sub_image4",
+      "label": "Sub Section Image 4"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Our Customer Service is 2X the industry standard"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Get help on your queries, orders, and deliveries with our personal assistant, who's always around to answer your questions"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "team_member",
+      "name": "Team Member",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Team Member Image"
+        }
+      ]
+    },
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon_image",
+          "label": "Icon Image (optional)"
+        },
+        {
+          "type": "text",
+          "id": "icon_class",
+          "label": "Icon Class (e.g., 'whatsapp-icon')",
+          "default": "default-icon-class" 
+        },
+        {
+          "type": "text",
+          "id": "feature_text",
+          "label": "Feature Text",
+          "default": "Available over WhatsApp or call"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Customer Service",
+      "category": "Custom Sections"
+    }
+  ]
+}
+{% endschema %}
