@@ -1,0 +1,137 @@
+<style>
+  .smihm-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0px 50px;
+    background-color: {{ section.settings.background_color_settings }};
+  }
+  .smihm-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: {{ section.settings.title_color_settings }};
+    margin-bottom: 8px;
+  }
+  .smihm-description {
+    font-size: 16px;
+    margin-top: 0px;
+    margin-bottom: 24px;
+    color: {{ section.settings.description_color_settings }} ;
+  }
+  .smihm-images-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0px;
+    flex-wrap: wrap;
+  }
+  .smihm-images-container img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: 768px) {
+    
+  }
+
+  @media (max-width: 1023px) {
+    .smihm-images-container {
+      width: 100%;
+      max-width: 1100px;
+    }
+    .smihm-images-container img {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .smihm-images-container {
+      width: 100%;
+      max-width: 1100px;
+    }
+    .smihm-images-container img {
+      width: 210px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  }
+</style>
+
+<div class="smihm-container">
+  <h2 class="smihm-title">{{ section.settings.title_settings }}</h2>
+  <p class="smihm-description">{{ section.settings.description_settings }}</p>
+
+  <div class="smihm-images-container">
+    {% for block in section.blocks %}
+      {% if block.type == 'image' %}
+        {{ block.settings.image_setting | image_url: width: 100 | image_tag }}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Social Media Images HS",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title_settings",
+      "default": "Join Us On Social Media"
+    },
+    {
+      "type": "text",
+      "label": "Description",
+      "id": "description_settings",
+      "default": "Health Tips, Recipes & More"
+    },
+    {
+      "type": "color",
+      "label": "Background Color",
+      "id": "background_color_settings",
+      "default": "#fcfcfc"
+    },
+    {
+      "type": "color",
+      "label": "Title Color",
+      "id": "title_color_settings",
+      "default": "#206613"
+    },
+    {
+      "type": "color",
+      "label": "Description Color",
+      "id": "description_color_settings",
+      "default": "#000"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Upload Image",
+          "id": "image_setting"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Social Media Images Home Section",
+      "category": "Custom Section"
+    }
+  ]
+}
+{% endschema %}

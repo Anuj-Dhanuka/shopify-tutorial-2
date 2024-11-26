@@ -1,0 +1,277 @@
+<style>
+  .carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 70vh;
+  }
+
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+  }
+
+  .carousel-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+
+  .carousel-button button {
+    width: 12px;
+    height: 12px;
+    border: none;
+    border-radius: 50%;
+    border: 1px solid #808080;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .carousel-button button.active {
+    background-color: #fff;
+  }
+
+  .sbwchp-contianer {
+    min-width: 100%; /*try to change this*/
+    height: 100%;
+    background-image: url({{ section.settings.background_image | image_url }});
+    background-size: cover;
+    position: relative;
+  }
+  .sbwchp-contianer2 {
+    background-image: url({{ section.settings.background_image2 | image_url }});
+  }
+  .sbwchp-contianer3 {
+    background-image: url({{ section.settings.background_image3 | image_url }});
+  }
+
+  .sbwchp-overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    inset: 0;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .sbwchp-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 100%;
+    width: 50%;
+  }
+  .sbwchp-title h1 {
+    margin: 0 0 10px;
+    font-size: 32px;
+    color: #ffffff;
+    line-height: 32px;
+  }
+  .sbwchp-mini-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+  .sbwchp-mini-card-title {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 0px;
+  }
+  .sbwchp-mini-card-description {
+    color: #ffffff;
+  }
+  .sbwchp-mini-card-description {
+    color: #ffffff;
+  }
+  .sbwchp-description {
+    margin: 0 0 15px;
+    font-size: 16px;
+    color: #ffffff;
+  }
+  .sbwchp-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #e7c678;
+    color: #206613;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+
+<div class="carousel-container">
+  <div class="carousel">
+    <div class="sbwchp-contianer">
+      <div class="sbwchp-overlay">
+        <div class="sbwchp-card">
+          <div class="sbwchp-title">{{ section.settings.heading }}</div>
+          <div class="sbwchp-mini-card">
+            <div>
+              <h2 class="sbwchp-mini-card-title">5000+</h2>
+              <p class="sbwchp-mini-card-description">Farmers Empowered</p>
+            </div>
+            <div>
+              <h2 class="sbwchp-mini-card-title">25+</h2>
+              <p class="sbwchp-mini-card-description">Micro-entrepreneur Units</p>
+            </div>
+            <div>
+              <h2 class="sbwchp-mini-card-title">5 Lakh+</h2>
+              <p class="sbwchp-mini-card-description">Families Served</p>
+            </div>
+          </div>
+          <button class="sbwchp-button">
+            {{ section.settings.button_text }}
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="sbwchp-contianer sbwchp-contianer2">
+      <div class="sbwchp-overlay">
+        <div class="sbwchp-card">
+          <div class="sbwchp-title">{{ section.settings.heading2 }}</div>
+          <p class="sbwchp-mini-card-description">
+            {{ section.settings.description2 }}
+          </p>
+          <button class="sbwchp-button">{{ section.settings.button_text2 }}</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="sbwchp-contianer sbwchp-contianer3">
+      <div class="sbwchp-overlay">
+        <div class="sbwchp-card">
+          <div class="sbwchp-title">{{ section.settings.heading3 }}</div>
+          <p class="sbwchp-mini-card-description">
+            {{ section.settings.description3 }}
+          </p>
+          <button class="sbwchp-button">{{ section.settings.button_text3 }}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-button">
+    <button class="dot" data-index="0"></button>
+    <button class="dot" data-index="1"></button>
+    <button class="dot" data-index="2"></button>
+  </div>
+</div>
+
+<script>
+  const carousel = document.querySelector('.carousel');
+  const dots = document.querySelectorAll('.dot');
+  let currentIndex = 0;
+  let interval;
+
+  const updateCarousel = (index) => {
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+  };
+
+  const startAutoSlide = () => {
+    interval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % dots.length;
+      updateCarousel(currentIndex);
+    }, 5000);
+  };
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      clearInterval(interval);
+      currentIndex = index;
+      updateCarousel(index);
+      startAutoSlide();
+    });
+  });
+
+  updateCarousel(currentIndex);
+  startAutoSlide();
+</script>
+
+{% schema %}
+{
+  "name": "Slideshow Banner & Card",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "About more"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image2",
+      "label": "Background Image 2"
+    },
+    {
+      "type": "richtext",
+      "id": "heading2",
+      "label": "Heading 2"
+    },
+    {
+      "type": "text",
+      "id": "description2",
+      "label": "Description 2",
+      "default": "Our farmers work twice as hard as we do in order to deliver the best to you."
+    },
+    {
+      "type": "text",
+      "id": "button_text2",
+      "label": "Button Text 2",
+      "default": "About more"
+    },
+
+    {
+      "type": "image_picker",
+      "id": "background_image3",
+      "label": "Background Image 3"
+    },
+    {
+      "type": "richtext",
+      "id": "heading3",
+      "label": "Heading 3"
+    },
+    {
+      "type": "text",
+      "id": "description3",
+      "label": "Description 3",
+      "default": "By choosing healthy food, you're also helping to secure rural livelihoods."
+    },
+    {
+      "type": "text",
+      "id": "button_text3",
+      "label": "Button Text 3",
+      "default": "About more"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Slideshow Banner with Card Home Page",
+      "category": "Custom Section"
+    }
+  ]
+}
+{% endschema %}

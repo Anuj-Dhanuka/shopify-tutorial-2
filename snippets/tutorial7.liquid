@@ -1,0 +1,40 @@
+{% comment %} {{ collection.products.first | json }} {% endcomment %}
+{{ 'tutorial.css' | asset_url | stylesheet_tag }}
+
+<p>{{ 'This is the text with more text' | highlight: 'text' }}</p>
+
+<p>copyright {{ 'now' | date: '%Y-%m-%d' }}</p>
+
+<br>
+
+{% assign background_color = '#ffffff' %}
+
+<div class="swatch" style="background: {{ background_color | color_darken: 20 }}">
+
+
+</div>
+
+<br>
+
+{% assign background_color_1 = '#000000' %}
+
+<div class="swatch" style="background: {{ background_color_1 | color_lighten : 60 }}">
+</div>
+
+<br>
+
+{% assign color_2 = '#ff0000' %}
+{% assign color_3 = '#0000ff' %}
+
+<div class="swatch" style="background: {{ color_2 | color_mix : color_3, 20 }}">
+</div>
+
+<br>
+
+<p>{{ '#ffffff' | color_contrast: '#000000' }}</p>
+
+{{ collection.products.first.featured_image | image_url: width: 500, height: 500 | image_tag }}
+
+{{ snowboard_image.jpg }}
+
+<script src="{{ 'tutorial.js' | asset_url }}" defer> </script>

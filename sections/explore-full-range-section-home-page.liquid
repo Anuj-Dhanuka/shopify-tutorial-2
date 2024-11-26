@@ -1,0 +1,99 @@
+<style>
+  .efrshp-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: {{ section.settings.background_color_settings }};
+  }
+  .efrshp-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: {{ section.settings.title_color_settings }};
+    margin-bottom: 8px;
+  }
+  .efrshp-description {
+    font-size: 16px;
+    margin-top: 0px;
+    margin-bottom: 24px;
+    color: {{ section.settings.description_color_settings }};
+  }
+  .efrshp-images-container {
+    width: 100%;
+  }
+  .efrshp-images-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (min-width: 768px) {
+
+  }
+
+  @media (max-width: 1023px) {
+  }
+
+  @media (min-width: 1024px) {
+  }
+</style>
+
+<div class="efrshp-container">
+  <h2 class="efrshp-title">{{ section.settings.title_settings }}</h2>
+  <p class="efrshp-description">{{ section.settings.description_settings }}</p>
+
+  <div class="efrshp-images-container">
+    
+    {{ section.settings.image_setting | image_url: width: "1200px" | image_tag }}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Explore FUll Range HS",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Upload Image",
+      "id": "image_setting"
+    },
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title_settings",
+      "default": "Explore Our Full Range"
+    },
+    {
+      "type": "text",
+      "label": "Description",
+      "id": "description_settings",
+      "default": "Explore our wide range of staples and fresh harvests. Experience the goodness of 100% natural farm essentials, delivered to your doorstep every day with Anveshan"
+    },
+    {
+      "type": "color",
+      "label": "Background Color",
+      "id": "background_color_settings",
+      "default": "#fcfcfc"
+    },
+    {
+      "type": "color",
+      "label": "Title Color",
+      "id": "title_color_settings",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "label": "Description Color",
+      "id": "description_color_settings",
+      "default": "#808080"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Explore Full Range Home Section",
+      "category": "Custom Section"
+    }
+  ]
+}
+{% endschema %}

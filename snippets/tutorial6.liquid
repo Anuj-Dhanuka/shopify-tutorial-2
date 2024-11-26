@@ -1,0 +1,99 @@
+{% assign my_number = '10' %}
+
+{% comment %} {% assign my_new_number = my_number | plus: 5 %} {% endcomment %}
+{% comment %} {% assign my_new_number = my_number | minus: 5 %} {% endcomment %}
+{% comment %} {% assign my_new_number = my_number | times: 5 %} {% endcomment %}
+{% comment %} {% assign my_new_number = my_number | divided_by: 5 %} {% endcomment %}
+
+{% assign my_new_number = my_number | plus: 0 %}
+
+{{ my_new_number }}
+
+{% if my_new_number > 5 %}
+  <p>my number is greater than 5</p>
+{% endif %}
+
+{% assign modulo_of_my_num = my_new_number | modulo: 2 %}
+
+{% if modulo_of_my_num == 0 %}
+  <p>even number</p>
+  {% else %}
+    <p>odd number</p>
+{% endif %}
+
+{% assign my_abs_num = -11 | abs %}
+
+{{ my_abs_num }}
+
+<br>
+
+{% assign my_rounded_number = 10.5 | round %}
+
+{{ my_rounded_number }}
+
+<br>
+
+{% assign my_floor_number = 10.5 | floor %}
+
+{{ my_floor_number }}
+
+<br>
+
+{% assign a_num = 60 %}
+
+{{ a_num | at_least: 70 }}
+
+<br>
+
+{% assign my_string = "Hello world" %}
+
+{% assign string_2 = ", I am here" %}
+
+{{ my_string }}
+
+<br>
+
+{{ my_string | upcase}}
+
+<br>
+
+{{ my_string | downcase }}
+
+<br>
+
+{{ my_string | capitalize }}
+
+<br>
+
+{{ my_string | append: string_2 }}
+
+<br>
+
+{% assign my_long_string = "This is my long string, not so long" %}
+
+{{ my_long_string | truncate: 20 }}
+
+{%assign all_prices = products | map: 'price' | sort %}
+
+{%for price in all_prices %}
+  <p>{{price | money }}</p>
+{% endfor %}
+
+{%assign sum_of_prices = all_prices | sum %}
+
+<p>Total of all items: {{sum_of_prices }}</p>
+
+{%assign snowboard = products | where: 'title', 'The 3p Fulfilled Snowboard' | first %}
+
+<p>{{snowboard.title }} - {{ snowboard.price}}</p>
+
+{% assign all_tags = '' %}
+
+{%for product in products %}
+  {%for tag in product.tags %}
+    {%assign all_tags = all_tags | append: tag | append: ' ' %}
+  {% endfor %}
+{% endfor %}
+
+<p>{{all_tags | split: ' ' | uniq | split: ' ' }}</p>
+

@@ -1,0 +1,63 @@
+<style>
+    .hshp-carousel {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .hshp-image-container {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: {{ section.blocks | size | times: 100 }}%; /* Set width dynamically */
+    }
+
+    .hshp-image-container img {
+      flex-shrink: 0;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .hshp-carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .hshp-carousel-button.left {
+      left: 10px;
+    }
+
+    .hshp-carousel-button.right {
+      right: 10px;
+    }
+</style>
+
+<div class="hshp-carousel">
+    <div class="hshp-image-container">
+      {% for block in section.blocks %}
+        <img src="{{ block.settings.image_settings | image_url: width: 1500 }}" style="width: 100%;">
+      {% endfor %}
+    </div>
+    <button class="hshp-carousel-button left" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="hshp-carousel-button right" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+<script>
+    const container = document.querySelector('.hshp-image-container');
+    let currentIndex = 0;
+    const totalSlides = container.children.length;
+
+    function moveSlide(direction) {
+      currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+      container.style.transform = `translateX(-${currentIndex * (100 / totalSlides)}%)`;
+    }
+
+    // Set an interval for auto-sliding
+    setInterval(() => moveSlide(1), 5000);
+</script>

@@ -1,0 +1,87 @@
+<style>
+  .heading-style {
+      text-align: {{ section.settings.title_alignment }};
+  }
+
+  .promotion-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+   }
+
+   .promotion-heading {
+        text-align: center;
+    }
+</style>
+
+<h2 class="heading-style">{{ section.settings.title }}</h2>
+
+<div class="promotion-container">
+  {% for block in section.blocks %}
+    {% if block.type == 'promotion' %}
+      <div>
+        <h3 class="promotion-heading">{{ block.settings.title }}</h3>
+        {{ block.settings.image | image_url: width: 100 | image_tag }}
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Promotions Group",
+  "tag": "section",
+  "class": "my-wrapper-class",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title"
+    },
+    {
+      "type": "select",
+      "label": "Title Alignment",
+      "id": "title_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Promotions Group"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "promotion",
+      "name": "Promotion",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

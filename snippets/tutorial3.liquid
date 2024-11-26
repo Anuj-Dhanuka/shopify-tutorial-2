@@ -13,3 +13,19 @@
 <p>{{ product.title }}</p>
 <p>{{ product.tags }}</p>
 
+{% if product.title contains "Snowboard" %}
+  <p>this is a Snowboard</p>
+{% endif %}
+
+{% unless product.title contains "premium" %}
+  <p>title not contains premium</p>
+{% endunless %}
+
+{% case product.type %}
+  {% when 'snowboard' %}
+    <p>This is a snowboard</p>
+  {% when second_value %}
+    
+  {% else %}
+    
+{% endcase %}

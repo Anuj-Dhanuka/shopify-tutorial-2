@@ -1,0 +1,119 @@
+<style>
+  .tabir-main-section {
+    background-color: {{ section.settings.background-color }};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 80px;
+  }
+  .tabir-content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+  .tabir-content-heading {
+    color: {{ section.settings.heading-color }};
+    margin-bottom: 24px;
+    margin-top: 0px
+  }
+  .tabir-content-description {
+    color: {{ section.settings.description-color }};
+    margin-bottom: 0px;
+    margin-top: 0px
+  }
+  .tabir-content-button {
+    background-color: {{ section.settings.button-bg-color }};
+    color: {{ section.settings.button-text-color }};
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 25px;
+  }
+
+  @media (min-width: 992px) {
+    .tabir-content-container {
+      max-width: 800px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .tabir-content-container {
+      max-width: 900px;
+    }
+  }
+</style>
+
+<div class="tabir-main-section">
+  <div class="tabir-content-container">
+    <div>
+      <h2 class="tabir-content-heading">{{ section.settings.title-setting }}</h2>
+      <p class="tabir-content-description">{{ section.settings.description-setting }}</p>
+    </div>
+    <button class="tabir-content-button">{{ section.settings.button-title-setting }}</button>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Text and Button in Row",
+  "settings": [
+    {
+        "type": "text",
+        "label": "Title",
+        "id": "title-setting",
+        "default": "Looking to buy in bulk?"
+    },
+    {
+        "type": "text",
+        "label": "Description",
+        "id": "description-setting",
+        "default": "Our wholesale team is available and will assist you during the process."
+    },
+    {
+        "type": "text",
+        "label": "Button Title",
+        "id": "button-title-setting",
+        "default": "Get in touch"
+    },
+    {
+        "type": "color",
+        "label": "Background Color",
+        "id": "background-color",
+        "default": "#206613"
+    },
+    {
+        "type": "color",
+        "label": "Heading Color",
+        "id": "heading-color",
+        "default": "#ffffff"
+    },
+    {
+        "type": "color",
+        "label": "Description Color",
+        "id": "description-color",
+        "default": "#ffffff"
+    },
+    {
+        "type": "color",
+        "label": "Button Background Color",
+        "id": "button-bg-color",
+        "default": "#ffffff"
+    },
+    {
+        "type": "color",
+        "label": "Button Text Color",
+        "id": "button-text-color",
+        "default": "#206613"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text and Button in Row",
+      "category": "Custom Section"
+    }
+  ]
+}
+{% endschema %}

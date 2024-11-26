@@ -1,0 +1,56 @@
+{% comment %} Strings {% endcomment %}
+
+{%- assign my_string = 'Hello World!' -%}
+{{- my_string -}}
+
+<br>
+
+{% comment %} Numbers {% endcomment %}
+{%- assign my_number = 1234 -%}
+{{- my_number -}}
+
+<br>
+
+{% comment %} Numbers {% endcomment %}
+{%- assign my_boolean = true -%}
+{{- my_boolean -}}
+
+<br>
+
+{% comment %} null {% endcomment %}
+
+{%- assign my_null = null -%}
+{{- my_null -}}
+
+<br>
+
+{% if my_null == null %}
+  <p>My variable is null</p>
+{% endif %}
+
+<br>
+
+{{- product.tags -}}
+
+<br>
+
+{%- for tag in product.tags -%}
+    <p> tags </p>
+  {{ tag }}
+{%- endfor -%}
+
+{{ product.title }}
+
+{% assign html = "<div>
+    <p>Hello world</p>
+    </div>" %}
+
+{{- html -}}    
+
+{% capture html %}
+  <div>
+    <p>Hello {{- product.title -}}</p>
+  </div>
+{% endcapture %}
+
+{{- html -}}

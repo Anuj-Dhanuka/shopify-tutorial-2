@@ -1,0 +1,21 @@
+{% for product in collection.products %}
+  <p style="
+    {% if forloop.first %} 
+        color: green
+        {% elsif forloop.last %}
+            color: orange 
+    {% endif %}">
+     {{ forloop.index0 }} {{product.title }}
+  </p>
+{% endfor %}
+
+{% for i in (1..5) %}
+  <p>Hello world</p>
+{% endfor %}
+
+{% paginate collection.products by 5 %}
+  {% for product in collection.products %}
+    <p>{{ product.title }}</p>
+  {% endfor %}
+  {{ paginate | default_pagination }}
+{% endpaginate %}

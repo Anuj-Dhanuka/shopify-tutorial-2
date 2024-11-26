@@ -8,7 +8,7 @@
   {% endif %}
   
   <h2>{{ section.settings.title }}</h2>
-  <p class="subtitle">{{ section.settings.subtitle }}</p>
+  <p class="subtitle">{{ section.settings.subtitle | newline_to_br }}</p>
   
   <div class="team-images">
     {% assign sub_images = "sub_image1,sub_image2,sub_image3,sub_image4" | split: ',' %}
@@ -24,19 +24,32 @@
     {% endfor %}
   </div>
 
+
   <div class="features">
-    {% for block in section.blocks %}
-      {% if block.type == 'feature' %}
-        <div class="feature">
-          {% if block.settings.icon_image %}
-            {{ block.settings.icon_image | image_url: width: 32 | image_tag: class: 'feature-icon', alt: 'Icon' }}
-          {% else %}
-            <i class="icon {{ block.settings.icon_class }}"></i>
-          {% endif %}
-          <p>{{ block.settings.feature_text }}</p>
+      <div class="feature">
+        {% assign feature_text = section.settings.feature_text1 %}
+        {% render 'call-center-icon-home-page' %}
+        <p>{{ feature_text | newline_to_br }}</p>
+      </div>
+
+      <div class="feature">
+          {% assign feature_text = section.settings.feature_text2 %}
+          {% render 'support-message-icon-home-page' %}
+          <p>{{ feature_text | newline_to_br }}</p>
         </div>
-      {% endif %}
-    {% endfor %}
+
+        <div class="feature">
+          {% assign feature_text = section.settings.feature_text3 %}
+          {% render 'schedule-bell-icon-home-page' %}
+          <p>{{ feature_text | newline_to_br }}</p>
+        </div>
+
+        <div class="feature">
+          {% assign feature_text = section.settings.feature_text4 %}
+          {% render 'communication-file-icon-home-page' %}
+          <p>{{ feature_text | newline_to_br }}</p>
+        </div>
+    
   </div>
 </div>
 
@@ -45,7 +58,7 @@
 .customer-service-section {
   box-sizing: border-box;
   text-align: center;
-  background-color: #f9f9f9;
+  background-color: #fcfcfc;
   margin: 0px;
   padding: 40px 0px;
 }
@@ -57,8 +70,8 @@
 }
 
 .customer-service-section h2 {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 32px;
+  font-weight: 500;
   margin-bottom: 10px;
 }
 
@@ -74,7 +87,7 @@
   margin-bottom: 30px;
   width: 100vw;
   margin-left: 0px;
-  gap: 24px;
+  gap: 10rem;
 }
 
 .team-member img {
@@ -86,21 +99,22 @@
 
 .features {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: flex-start;
   margin-top: 20px;
+  gap: 4rem;
 }
 
 .feature {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 150px;
   text-align: center;
 }
 
 .feature img.feature-icon {
-  width: 32px;
-  height: 32px;
+  width: 46px;
+  height: 46px;
   margin-bottom: 10px;
 }
 
@@ -110,8 +124,10 @@
 }
 
 .feature p {
-  font-size: 14px;
+  font-size: 12px;
   color: #333;
+  line-height: 18px;
+  font-weight: 500;
 }
 </style>
 
@@ -151,46 +167,58 @@
       "default": "Our Customer Service is 2X the industry standard"
     },
     {
-      "type": "text",
+      "type": "textarea",
       "id": "subtitle",
       "label": "Subtitle",
       "default": "Get help on your queries, orders, and deliveries with our personal assistant, who's always around to answer your questions"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "team_member",
-      "name": "Team Member",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Team Member Image"
-        }
-      ]
     },
     {
-      "type": "feature",
-      "name": "Feature",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "icon_image",
-          "label": "Icon Image (optional)"
-        },
-        {
-          "type": "text",
-          "id": "icon_class",
-          "label": "Icon Class (e.g., 'whatsapp-icon')",
-          "default": "default-icon-class" 
-        },
-        {
-          "type": "text",
-          "id": "feature_text",
-          "label": "Feature Text",
-          "default": "Available over WhatsApp or call"
-        }
-      ]
+      "type": "text",
+      "id": "feature_icon_class1",
+      "label": "Feature 1 Icon Class",
+      "default": "default-icon-class"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_text1",
+      "label": "Feature 1 Text",
+      "default": "Feature 1 description."
+    },
+    {
+      "type": "text",
+      "id": "feature_icon_class2",
+      "label": "Feature 2 Icon Class",
+      "default": "default-icon-class"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_text2",
+      "label": "Feature 2 Text",
+      "default": "Feature 2 description."
+    },
+    {
+      "type": "text",
+      "id": "feature_icon_class3",
+      "label": "Feature 3 Icon Class",
+      "default": "default-icon-class"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_text3",
+      "label": "Feature 3 Text",
+      "default": "Feature 3 description."
+    },
+    {
+      "type": "text",
+      "id": "feature_icon_class4",
+      "label": "Feature 4 Icon Class",
+      "default": "default-icon-class"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_text4",
+      "label": "Feature 4 Text",
+      "default": "Feature 4 description."
     }
   ],
   "presets": [

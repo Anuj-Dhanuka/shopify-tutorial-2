@@ -1,0 +1,21 @@
+{% comment %}
+  Renders a first and a second word 
+
+  Accepts:
+  -> word: {string} the first word
+  -> second_word: {string} the second word
+
+  Usage: 
+  render 'tutorial8', {word: word_variable, second_word: second_word_variable}
+{% endcomment %}
+
+<p>The word is {{ word }} and the second word is {{ second_word }}</p>
+
+
+{% comment %} {% liquid
+  assign my_number = 10
+
+  for product in collection.products
+    echo '<p>' | append: product.title | append: '</p>'
+  endfor
+%} {% endcomment %} 
