@@ -76,6 +76,7 @@
         <h2 class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
           {{ section.settings.title }}
         </h2>
+
       {%- endif -%}
       {%- if section.settings.description != blank
         or section.settings.show_description
@@ -86,6 +87,7 @@
             {{ section.settings.collection.description }}
           {%- else -%}
             {{ section.settings.description -}}
+
           {%- endif %}
         </div>
       {%- endif -%}
@@ -101,6 +103,7 @@
       >
         {% assign skip_card_product_styles = false %}
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+
           <li
             id="Slide-{{ section.id }}-{{ forloop.index }}"
             class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -187,6 +190,7 @@
 
     {%- if section.settings.show_view_all and more_in_collection -%}
       <div class="center collection__view-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+
         <a
           href="{{ section.settings.collection.url }}"
           class="{% if section.settings.view_all_style == 'link' %}link underlined-link{% elsif section.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %}"
@@ -199,6 +203,7 @@
     {% if section.settings.image_shape == 'arch' %}
       {{ 'mask-arch.svg' | inline_asset_content }}
     {%- endif -%}
+
   </div>
 </div>
 

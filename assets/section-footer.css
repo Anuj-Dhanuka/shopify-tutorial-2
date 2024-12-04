@@ -2,6 +2,14 @@
   border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
 }
 
+.footer h2 {
+  color: #D4C398;
+}
+
+.footer button {
+  color: #206613;
+}
+
 .footer:not(.color-scheme-1) {
   border-top: none;
 }
@@ -164,6 +172,8 @@
 .footer__list-social:empty,
 .footer-block--newsletter:empty {
   display: none;
+  
+  
 }
 
 .footer__follow-on-shop {
@@ -238,6 +248,7 @@
   .footer-block__newsletter {
     display: flex;
     justify-content: center;
+    
   }
 
   .footer-block__newsletter {
@@ -432,6 +443,7 @@
 
 .footer-block:only-child .footer-block__brand-info .footer__list-social.list-social {
   justify-content: center;
+  
 }
 
 .footer-block__brand-info .footer__list-social.list-social {

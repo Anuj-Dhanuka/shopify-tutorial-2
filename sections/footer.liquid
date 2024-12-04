@@ -15,6 +15,109 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
+  .footer-address-heading1 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+  .footer-address-heading2 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+  .footer-address-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .footer-address-inner-container {
+    flex-grow: 2;
+  }
+  .footer-address-newsletter-button {
+    height: 40px;
+    width: 40px;
+    background-color: #D4C398;
+    border: none;
+    border-bottom-right-radius: 16px;
+  }
+  .footer-address-newsletter-input {
+    padding: 0px 16px;
+    height: 40px;
+    width: 300px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border: none;
+  }
+
+  .footer__blocks-wrapper {
+    flex-grow: 1.5;
+  }
+
+  .footer-section-need-help-container {
+  }
+
+  .footer-need-help-contact-us-button {
+    height: 36px;
+    width: 200px;
+    background-color: #D4C398;
+    border: none;
+    border-radius: 36px;
+    margin-bottom: 24px;
+  }
+
+  .list-social {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+  .list-social__item .icon {
+    color: #206613;
+  }
+  .footer-need-help-store-buttons {
+    display: flex;
+    gap: 8px;
+  }
+
+  .footer-need-help-store-button {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    border-radius: 45px;
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    min-width: 160px;
+    white-space: nowrap;
+    height: 45px;
+  }
+
+  .footer-need-help-store-button-apple {
+    gap: 8px;
+  }
+
+  .footer-need-help-store-button img {
+  }
+
+  .footer-need-help-store-button p {
+
+  }
+
+  .footer-need-help-title {
+    font-size: 16px;
+    margin-top: 0px
+  }
+
+  .footer-need-help-h2 {
+    font-size: 16px;
+    margin-top: 24px;
+  }
+
   @media screen and (min-width: 750px) {
     .footer {
       margin-top: {{ section.settings.margin_top }}px;
@@ -50,115 +153,174 @@
   -%}
     {%- unless only_empty_brand -%}
       <div class="footer__content-top page-width">
-        {%- if section.blocks.size > 0 -%}
-          {%- liquid
-            if section.blocks.size == 9
-              assign footer_grid_class = 'grid--3-col-tablet'
-            elsif section.blocks.size > 6
-              assign footer_grid_class = 'grid--4-col-desktop'
-            elsif section.blocks.size > 4
-              assign footer_grid_class = 'grid--3-col-tablet'
-            endif
-          -%}
-          <div
-            class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-            {% if settings.animations_reveal_on_scroll %}
-              data-cascade
+        {% if section.settings.footer_logo_image_settings %}
+          {{ section.settings.footer_logo_image_settings | image_url: width: 200 | image_tag }}
+        {% endif %}
+
+        <div class="footer-address-container">
+
+          {% for block in section.blocks %}
+            {% if block.type == 'address_block' %}
+              <div class="footer-address-inner-container">
+                <p class="footer-address-heading2">{{ block.settings.address_heading1 }}</p>
+                <p class="footer-address-heading2">{{ block.settings.address_heading2 }}</p>
+                <p>{{ block.settings.address_officer_name }}</p>
+                <h2>{{ block.settings.address_newsletter_heading }}</h2>
+                <div style="display: flex; align-items: center; gap: 0px;">
+                  <input
+                    class="footer-address-newsletter-input"
+                    placeholder="Email"
+                  >
+                  <button class="footer-address-newsletter-button">&#10095;</button>
+                </div>
+              </div>
             {% endif %}
-          >
-            {%- for block in section.blocks -%}
-              <div
-                class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                {{ block.shopify_attributes }}
-                {% if settings.animations_reveal_on_scroll %}
-                  data-cascade
-                  style="--animation-order: {{ forloop.index }};"
-                {% endif %}
-              >
-                {%- if block.settings.heading != blank -%}
-                  <h2 class="footer-block__heading inline-richtext">{{- block.settings.heading -}}</h2>
+          {% endfor %}
+
+          {%- if section.blocks.size > 0 -%}
+            {%- liquid
+              if section.blocks.size == 9
+                assign footer_grid_class = 'grid--3-col-tablet'
+              elsif section.blocks.size > 6
+                assign footer_grid_class = 'grid--4-col-desktop'
+              elsif section.blocks.size > 4
+                assign footer_grid_class = 'grid--3-col-tablet'
+              endif
+            -%}
+            <div
+              class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+              {% endif %}
+            >
+              {%- for block in section.blocks -%}
+                <div
+                  class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {{ block.shopify_attributes }}
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  {%- if block.settings.heading != blank -%}
+                    <h2 class="footer-block__heading inline-richtext">{{- block.settings.heading -}}</h2>
+                  {%- endif -%}
+
+                  {%- case block.type -%}
+                    {%- when '@app' -%}
+                      {% render block %}
+
+                    {%- when 'text' -%}
+                      <div class="footer-block__details-content rte">{{ block.settings.subtext }} Hi</div>
+                    {%- when 'link_list' -%}
+                      {%- if block.settings.menu != blank -%}
+                        <ul class="footer-block__details-content list-unstyled">
+                          {%- for link in block.settings.menu.links -%}
+                            <li>
+                              <a
+                                href="{{ link.url }}"
+                                class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}"
+                              >
+                                {{ link.title | escape }}
+                              </a>
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      {%- endif -%}
+                    {%- when 'brand_information' -%}
+                      <div class="footer-block__brand-info">
+                        {%- if settings.brand_image != blank -%}
+                          {%- assign brand_image_height = settings.brand_image_width
+                            | divided_by: settings.brand_image.aspect_ratio
+                          -%}
+                          <div
+                            class="footer-block__image-wrapper"
+                            style="max-width: min(100%, {{ settings.brand_image_width }}px);"
+                          >
+                            {{
+                              settings.brand_image
+                              | image_url: width: 1100
+                              | image_tag:
+                                loading: 'lazy',
+                                widths: '50, 100, 150, 200, 300, 400, 550, 800, 1100',
+                                height: brand_image_height,
+                                width: settings.brand_image_width
+                            }}
+                          </div>
+                        {%- endif -%}
+                        {%- if settings.brand_headline != blank -%}
+                          <h2 class="footer-block__heading rte">{{ settings.brand_headline }}</h2>
+                        {%- endif -%}
+                        {%- if settings.brand_description != blank -%}
+                          <div class="rte">{{ settings.brand_description }}</div>
+                        {%- endif -%}
+                        {%- if block.settings.show_social and has_social_icons -%}
+                          {%- render 'social-icons', class: 'footer__list-social' -%}
+                        {%- endif -%}
+                      </div>
+                    {%- when 'image' -%}
+                      <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
+                        {%- if block.settings.image != blank -%}
+                          {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
+                          <div
+                            class="footer-block__image-wrapper"
+                            style="max-width: min(100%, {{ block.settings.image_width }}px);"
+                          >
+                            <img
+                              srcset="{{ block.settings.image | image_url: width: block.settings.image_width }}, {{ block.settings.image | image_url: width: image_size_2x }} 2x"
+                              src="{{ block.settings.image | image_url: width: 760 }}"
+                              alt="{{ block.settings.image.alt | escape }}"
+                              loading="lazy"
+                              width="{{ block.settings.image.width }}"
+                              height="{{ block.settings.image.height }}"
+                            >
+                          </div>
+                        {%- else -%}
+                          {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                        {%- endif -%}
+                      </div>
+                  {%- endcase -%}
+                </div>
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+
+          {% for block in section.blocks %}
+            {% if block.type == 'need_help_block' %}
+              <div class="footer-section-need-help-container">
+                <h2 class="footer-need-help-title">{{ block.settings.need_help_title_settings }}</h2>
+                <button class="footer-need-help-contact-us-button">{{ block.settings.contact_button_label_settings }}</button>
+
+                {%- if block.settings.show_social and has_social_icons -%}
+                  {%- render 'social-icons', class: 'footer__list-social' -%}
                 {%- endif -%}
 
-                {%- case block.type -%}
-                  {%- when '@app' -%}
-                    {% render block %}
-                  {%- when 'text' -%}
-                    <div class="footer-block__details-content rte">
-                      {{ block.settings.subtext }}
-                    </div>
-                  {%- when 'link_list' -%}
-                    {%- if block.settings.menu != blank -%}
-                      <ul class="footer-block__details-content list-unstyled">
-                        {%- for link in block.settings.menu.links -%}
-                          <li>
-                            <a
-                              href="{{ link.url }}"
-                              class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}"
-                            >
-                              {{ link.title | escape }}
-                            </a>
-                          </li>
-                        {%- endfor -%}
-                      </ul>
-                    {%- endif -%}
-                  {%- when 'brand_information' -%}
-                    <div class="footer-block__brand-info">
-                      {%- if settings.brand_image != blank -%}
-                        {%- assign brand_image_height = settings.brand_image_width
-                          | divided_by: settings.brand_image.aspect_ratio
-                        -%}
-                        <div
-                          class="footer-block__image-wrapper"
-                          style="max-width: min(100%, {{ settings.brand_image_width }}px);"
-                        >
-                          {{
-                            settings.brand_image
-                            | image_url: width: 1100
-                            | image_tag:
-                              loading: 'lazy',
-                              widths: '50, 100, 150, 200, 300, 400, 550, 800, 1100',
-                              height: brand_image_height,
-                              width: settings.brand_image_width
-                          }}
-                        </div>
-                      {%- endif -%}
-                      {%- if settings.brand_headline != blank -%}
-                        <h2 class="footer-block__heading rte">{{ settings.brand_headline }}</h2>
-                      {%- endif -%}
-                      {%- if settings.brand_description != blank -%}
-                        <div class="rte">{{ settings.brand_description }}</div>
-                      {%- endif -%}
-                      {%- if block.settings.show_social and has_social_icons -%}
-                        {%- render 'social-icons', class: 'footer__list-social' -%}
-                      {%- endif -%}
-                    </div>
-                  {%- when 'image' -%}
-                    <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
-                      {%- if block.settings.image != blank -%}
-                        {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
-                        <div
-                          class="footer-block__image-wrapper"
-                          style="max-width: min(100%, {{ block.settings.image_width }}px);"
-                        >
-                          <img
-                            srcset="{{ block.settings.image | image_url: width: block.settings.image_width }}, {{ block.settings.image | image_url: width: image_size_2x }} 2x"
-                            src="{{ block.settings.image | image_url: width: 760 }}"
-                            alt="{{ block.settings.image.alt | escape }}"
-                            loading="lazy"
-                            width="{{ block.settings.image.width }}"
-                            height="{{ block.settings.image.height }}"
-                          >
-                        </div>
-                      {%- else -%}
-                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
-                      {%- endif -%}
-                    </div>
-                {%- endcase -%}
-              </div>
-            {%- endfor -%}
-          </div>
-        {%- endif -%}
+                <h2 class="footer-need-help-h2">{{ block.settings.store_buttons_title }}</h2>
 
+                <div class="footer-need-help-store-buttons">
+                  <a href="https://play.google.com/store" target="_blank" class="footer-need-help-store-button">
+                    <img
+                      src="{{ 'icon-play-store-color.svg' | asset_url }}"
+                      alt="Google Play Store"
+                      width="35"
+                      height="35"
+                    >
+                    <p>{{ block.settings.play_store_buttons_label }}</p>
+                  </a>
+                  <a href="https://www.apple.com/app-store/" target="_blank" class="footer-need-help-store-button footer-need-help-store-button-apple">
+                    <img
+                      src="{{ 'icon-apple-store-white.svg' | asset_url }}"
+                      alt="Apple App Store"
+                      width="20"
+                      height="20"
+                    >
+                    <p>{{ block.settings.apple_store_buttons_label }}</p>
+                  </a>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
         <div
           class="footer-block--newsletter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {% if settings.animations_reveal_on_scroll %}
@@ -329,6 +491,80 @@
       "type": "@app"
     },
     {
+      "type": "address_block",
+      "name": "Address Block",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "address_heading1",
+          "label": "Address Heading 1",
+          "default": "Corporate Office - Sector 44, Gurugram"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "address_heading2",
+          "label": "Address Heading 2",
+          "default": "Branch - IMT Manesar, Gurugram"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "address_officer_name",
+          "label": "Officer Details",
+          "default": "Grievance Redressal Officer: Suyash Gupta"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "address_newsletter_heading",
+          "label": "Newsletter Title",
+          "default": "Subscribe to our newsletter"
+        }
+      ]
+    },
+    {
+      "type": "need_help_block",
+      "name": "Need Help Block",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_social",
+          "default": true,
+          "label": "t:sections.footer.blocks.brand_information.settings.show_social.label",
+          "info": "t:sections.footer.blocks.brand_information.settings.show_social.info"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "need_help_title_settings",
+          "label": "Title",
+          "default": "NEED HELP?"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "contact_button_label_settings",
+          "label": "Contact Button Label",
+          "default": "Contact Us"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "store_buttons_title",
+          "label": "Heading 2",
+          "default": "Download App"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "play_store_buttons_label",
+          "label": "Play Store Button Label",
+          "default": "Google Play"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "apple_store_buttons_label",
+          "label": "Apple Store Button Label",
+          "default": "App Store"
+        }
+        
+      ]
+    },
+    {
       "type": "link_list",
       "name": "t:sections.footer.blocks.link_list.name",
       "settings": [
@@ -429,6 +665,11 @@
     }
   ],
   "settings": [
+    {
+      "type": "image_picker",
+      "label": "Footer Logo Image",
+      "id": "footer_logo_image_settings"
+    },
     {
       "type": "color_scheme",
       "id": "color_scheme",

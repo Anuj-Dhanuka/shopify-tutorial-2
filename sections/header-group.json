@@ -1,1 +1,85 @@
-{"name":"t:sections.header.name","type":"header","sections":{"announcement-bar":{"type":"announcement-bar","blocks":{"announcement-bar-0":{"type":"announcement","settings":{"text":"Enjoy FLAT 7% OFF on first order | Use : WELCOME7","link":""}},"announcement_phKbjQ":{"type":"announcement","settings":{"text":"Get extra 2% off all prepaid orders","link":""}},"announcement_EyqN3H":{"type":"announcement","settings":{"text":"Enjoy FREE SHIPPING on orders above ₹499","link":""}}},"block_order":["announcement-bar-0","announcement_phKbjQ","announcement_EyqN3H"],"settings":{"color_scheme":"scheme-f06475a0-65b6-4809-a1ca-126496337b28","show_line_separator":true,"show_social":false,"auto_rotate":true,"change_slides_speed":5,"enable_country_selector":false,"enable_language_selector":false}},"header":{"type":"header","custom_css":["element.style {width: 170px;}",".header__icon {color: #206613;}",".header__icon,.header__icon--cart .icon {height: auto; width: 3rem; padding: 0px; margin-left: 16px;}",".svg-wrapper > svg {height: auto; width: 3rem;}",".header__icon .icon {height: auto; width: 2.5rem; fill: none; margin-right: 9px;}"],"settings":{"logo_position":"middle-left","menu":"main-menu","menu_type_desktop":"dropdown","sticky_header_type":"on-scroll-up","show_line_separator":true,"color_scheme":"scheme-1","menu_color_scheme":"scheme-1","enable_country_selector":false,"enable_language_selector":true,"enable_customer_avatar":true,"mobile_logo_position":"center","margin_bottom":0,"padding_top":16,"padding_bottom":20}}},"order":["announcement-bar","header"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "Enjoy FLAT 7% OFF on first order | Use : WELCOME7",
+            "link": ""
+          }
+        },
+        "announcement_phKbjQ": {
+          "type": "announcement",
+          "settings": {
+            "text": "Get extra 2% off all prepaid orders",
+            "link": ""
+          }
+        },
+        "announcement_EyqN3H": {
+          "type": "announcement",
+          "settings": {
+            "text": "Enjoy FREE SHIPPING on orders above ₹499",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement-bar-0",
+        "announcement_phKbjQ",
+        "announcement_EyqN3H"
+      ],
+      "settings": {
+        "color_scheme": "scheme-f06475a0-65b6-4809-a1ca-126496337b28",
+        "show_line_separator": true,
+        "show_social": false,
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "custom_css": [
+        ".element.style {width: 170px;}",
+        ".header__icon {color: #206613;}",
+        ".header__icon,.header__icon--cart .icon {height: auto; width: 3rem; padding: 0px; margin-left: 16px;}",
+        ".svg-wrapper > svg {height: auto; width: 3rem;}",
+        ".header__icon .icon {height: auto; width: 2.5rem; fill: none; margin-right: 9px;}"
+      ],
+      "settings": {
+        "logo_position": "middle-left",
+        "menu": "main-menu",
+        "menu_type_desktop": "dropdown",
+        "sticky_header_type": "on-scroll-up",
+        "show_line_separator": true,
+        "color_scheme": "scheme-1",
+        "menu_color_scheme": "scheme-1",
+        "enable_country_selector": false,
+        "enable_language_selector": true,
+        "enable_customer_avatar": true,
+        "mobile_logo_position": "center",
+        "margin_bottom": 0,
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

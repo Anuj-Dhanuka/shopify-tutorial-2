@@ -13,16 +13,59 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "address_block_H7F67q": {
+          "type": "address_block",
+          "settings": {
+            "address_heading1": "<strong>Corporate Office</strong> - Sector 44, Gurugram",
+            "address_heading2": "<strong>Branch</strong> - IMT Manesar, Gurugram",
+            "address_officer_name": "Grievance Redressal Officer: Suyash Gupta",
+            "address_newsletter_heading": "<strong>Subscribe to our newsletter</strong>"
+          }
+        },
+        "link_list_yUebif": {
+          "type": "link_list",
+          "settings": {
+            "heading": "<strong>SERVICES</strong>",
+            "menu": "services"
+          }
+        },
+        "link_list_c7W8Eb": {
+          "type": "link_list",
+          "settings": {
+            "heading": "<strong>POLICIES</strong>",
+            "menu": "policies"
+          }
+        },
+        "need_help_block_mHrjNy": {
+          "type": "need_help_block",
+          "settings": {
+            "show_social": true,
+            "need_help_title_settings": "<strong>NEED HELP?</strong>",
+            "contact_button_label_settings": "<strong>Contact Us</strong>",
+            "store_buttons_title": "<strong>Download App</strong>",
+            "play_store_buttons_label": "<strong>Google Play</strong>",
+            "apple_store_buttons_label": "<strong>App Store</strong>"
+          }
+        }
+      },
+      "block_order": [
+        "address_block_H7F67q",
+        "link_list_yUebif",
+        "link_list_c7W8Eb",
+        "need_help_block_mHrjNy"
+      ],
       "settings": {
-        "color_scheme": "scheme-1",
-        "newsletter_enable": true,
+        "footer_logo_image_settings": "shopify://shop_images/anveshan-white-logo.png",
+        "color_scheme": "scheme-7fb18efc-df90-4054-8512-a195ccee780d",
+        "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
-        "show_social": true,
-        "enable_country_selector": true,
+        "show_social": false,
+        "enable_country_selector": false,
         "enable_language_selector": true,
-        "payment_enable": true,
-        "show_policy": true,
+        "payment_enable": false,
+        "show_policy": false,
         "margin_top": 0,
         "padding_top": 36,
         "padding_bottom": 36

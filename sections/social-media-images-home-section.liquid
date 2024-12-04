@@ -32,7 +32,7 @@
     height: 170px;
     object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 
   @media (min-width: 768px) {
@@ -55,11 +55,11 @@
   @media (min-width: 1024px) {
     .smihm-images-container {
       width: 100%;
-      max-width: 1100px;
+      max-width: 1400px;
     }
     .smihm-images-container img {
-      width: 210px;
-      height: 200px;
+      width: 270px;
+      height: 270px;
       object-fit: cover;
       border-radius: 8px;
     }
@@ -73,7 +73,7 @@
   <div class="smihm-images-container">
     {% for block in section.blocks %}
       {% if block.type == 'image' %}
-        {{ block.settings.image_setting | image_url: width: 100 | image_tag }}
+        {{ block.settings.image_setting | image_url: width: 300 | image_tag }}
       {% endif %}
     {% endfor %}
   </div>

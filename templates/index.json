@@ -1,1 +1,540 @@
-{"sections":{"custom_liquid_PK4HPW":{"type":"custom-liquid","settings":{"custom_liquid":"<div class=\"custom-section\" style=\"background-image: url('https:\/\/i.pinimg.com\/originals\/ff\/8a\/22\/ff8a22b925575a27ef4aaed0ee52343a.jpg');\">\n<div class=\"left-content-outer-label\">\n<div class=\"left-content-label-container\">\n        <p>New Launcheddd!<\/p>\n      <\/div>\n<\/div>\n  <div class=\"content-wrapper\">\n    <div class=\"left-content\">\n      \n      <h2>Your Heading Text Here<\/h2>\n      <p>Your description text goes here. You can add more content to describe your products or services.<\/p>\n    <\/div>\n    <div class=\"right-image\">\n      <img src=\"{{ 'right-side-image.jpg' | asset_url }}\" alt=\"Right Side Image\" \/>\n    <\/div>\n  <\/div>\n<\/div>\n\n<style>\n.custom-section {\n  display: flex;\n  align-items: center;\n  height: 100vh; \/* Full viewport height *\/\n  background-size: cover;\n  background-position: center;\n  color: #ffffff;\n  box-sizing: border-box; \/* Consistent sizing *\/\n}\n.content-wrapper {\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between; \/* Adds space between left and right sections *\/\n  gap: 20px; \/* Space between content and image *\/\n  padding: 20px;\n}\n.left-content {\n  flex: 1;\n  padding: 20px;\n}\n\n.left-content-label-container {\nposition: absolute;\n  padding: 5px 20px;\n  display: inline-flex;\n  justify-content: center;\n  align-items: center;\n  margin-bottom: 15px; \/* Space between label and heading *\/\n  border-top-right-radius: 50px;\n  border-bottom-right-radius: 50px;\n  background-color: #206613;\n}\n.left-content-outer-label {\nposition: relative;\nheight: 50px;\nbackground-color: blue;\n}\n.left-content-label-container p {\n  margin: 0;\n  color: #ffffff;\n}\n.left-content h2 {\n  font-size: 32px;\n  margin-bottom: 10px;\n}\n.left-content p {\n  font-size: 18px;\n}\n.right-image {\n  flex: 0 0 300px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.right-image img {\n  max-width: 100%;\n  height: auto;\n  border-radius: 10px;\n}\n\n\/* Responsive Design for Smaller Screens *\/\n@media (max-width: 768px) {\n  .content-wrapper {\n    flex-direction: column;\n    gap: 10px; \/* Reduce gap on small screens *\/\n  }\n  .left-content, .right-image {\n    flex: unset;\n    width: 100%;\n  }\n  .left-content-label-container {\n    margin-bottom: 10px; \/* Adds space below label on mobile *\/\n  }\n}\n<\/style>","color_scheme":"","padding_top":0,"padding_bottom":0}},"slideshow_mhWkMq":{"type":"slideshow","settings":{"layout":"full_bleed","slide_height":"medium","slider_visual":"counter","auto_rotate":false,"change_slides_speed":5,"image_behavior":"none","show_text_below":true,"accessibility_info":"Slideshow about our brand"}},"featured_collection_YmjrzL":{"type":"featured-collection","custom_css":[".collection__title.title-wrapper {margin-bottom: 2rem; display: flex; flex-direction: row; align-content: center; justify-content: center;}",".card .media {width: 100%; border-radius: 16px;}"],"settings":{"title":"<strong>Anveshan's Favorites<\/strong>","heading_size":"h1","description":"","show_description":false,"description_style":"body","collection":"anveshans-favorites","products_to_show":4,"columns_desktop":4,"full_width":false,"show_view_all":true,"view_all_style":"solid","enable_desktop_slider":false,"color_scheme":"scheme-64067ede-2eb9-49e6-9239-ad1d5efa6c0d","image_ratio":"adapt","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"quick_add":"standard","columns_mobile":"2","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"multicolumn_tLfNee":{"type":"multicolumn","blocks":{"column_NF6tpt":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/authenticity.png","title":"<strong>AUTHENTICITY<\/strong>","text":"<p>Bringing purest form of food direct from the farms<\/p>","link_label":"","link":""}},"column_RnaCVc":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/tradition-culture.png","title":"<strong>TRADITION<\/strong>","text":"<p>Harnessing age-old wisdom passed down by Grandmas<\/p>","link_label":"","link":""}},"column_ifpUHQ":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/brutal-honesty.png","title":"<strong>HONESTY<\/strong>","text":"<p>Being 100% transparent & thoroughly lab-tested<\/p><p><\/p>","link_label":"","link":""}},"column_ykQfbb":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/purpose.png","title":"<strong>PURPOSE<\/strong>","text":"<p>Empowering rural India with employment & fair trade<\/p>","link_label":"","link":""}}},"block_order":["column_NF6tpt","column_RnaCVc","column_ifpUHQ","column_ykQfbb"],"custom_css":[".multicolumn .title-wrapper-with-link {margin-top: 0; display: flex; justify-content: center;}",".multicolumn-card {position: relative; box-sizing: border-box; background-color: white; display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 36px;}",".multicolumn .title {margin: 0; color: #206613;}",".multicolumn .button {margin-top: 4rem; display: none;}"],"settings":{"title":"<strong>We Believe In<\/strong>","heading_size":"h1","image_width":"half","image_ratio":"adapt","columns_desktop":4,"column_alignment":"left","background_style":"primary","button_label":"Button label","button_link":"","color_scheme":"scheme-e6d1ca08-7a0b-4f4c-9347-5d53f0bf0244","columns_mobile":"1","swipe_on_mobile":false,"padding_top":36,"padding_bottom":76}},"multicolumn_GzcYdn":{"type":"multicolumn","blocks":{"column_QTfW7c":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/anveshan-hallikar-cow-ghee_500g.png","title":"Halikar Cow Ghee","text":"<p><em>₹  999    ₹ 1,110<\/em><\/p>","link_label":"","link":""}},"column_6NLWWk":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/co_anv_01_glass_1L_54804287-7bbc-49b0-9d9f-8664c31ccd1a.webp","title":"Wood-Pressed Coconut Oil","text":"<p><em>₹ 999 ₹ 1,110<\/em><\/p>","link_label":"","link":""}},"column_E4C7e4":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/gno_anv_01_pls_1L.png","title":"Wood-Pressed Coconut Oil","text":"<p><em>₹ 999 ₹ 1,110<\/em><\/p>","link_label":"","link":""}},"column_fgVfpV":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/bmo_anv_01_glass_1L.png","title":"Wood-Pressed Black-Mustard Oil","text":"<p><em>₹ 999 ₹ 1,110<\/em><\/p>","link_label":"","link":""}},"column_ExMPPe":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/anveshan-mishriGulkand.png","title":"Mishri Gulkand","text":"<p><em>₹ 999 ₹ 1,110<\/em><\/p>","link_label":"","link":""}},"column_kJdD8D":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/smo_anv_01_glass_1L.png","title":"Wood-Pressed Black Sesame Oil","text":"<p><em>₹ 999 ₹ 1,110<\/em><\/p>","link_label":"","link":""}}},"block_order":["column_QTfW7c","column_6NLWWk","column_E4C7e4","column_fgVfpV","column_ExMPPe","column_kJdD8D"],"custom_css":[".multicolumn-card {position: relative; box-sizing: border-box; background-color: white; text-align: center; margin-bottom: 36px;}",".multicolumn-card__info {padding: 0px; padding-top: 2.5rem;}",".multicolumn-card-spacing {padding-top: 0; margin-left: 0px; margin-right: 0px;}",".multicolumn-list h3,.multicolumn-list p {font-size: 12px; margin: 0; font-weight: 600;}","@media screen and (min-width: 750px) {.grid {column-gap: 16px; width: 1150px; }}",".media.media--transparent.media--adapt {height: 300px; width: auto;}"],"settings":{"title":"<strong>Cook With Anveshan<\/strong>","heading_size":"h1","image_width":"full","image_ratio":"adapt","columns_desktop":6,"column_alignment":"left","background_style":"primary","button_label":"Button label","button_link":"","color_scheme":"","columns_mobile":"1","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"featured_collection_jkNpkC":{"type":"featured-collection","custom_css":[".collection__title.title-wrapper {margin-bottom: 2rem; display: flex; flex-direction: row; align-content: center; justify-content: center;}",".card .media {width: 100%; border-radius: 16px;}"],"settings":{"title":"<strong>Winter Special<\/strong>","heading_size":"h1","description":"","show_description":false,"description_style":"body","collection":"winter-special","products_to_show":4,"columns_desktop":4,"full_width":false,"show_view_all":true,"view_all_style":"solid","enable_desktop_slider":false,"color_scheme":"scheme-e4e4ad3b-049c-484d-a3fc-d614664f09b7","image_ratio":"adapt","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"quick_add":"standard","columns_mobile":"2","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"slideshow_banner_with_card_home_page_33hhPb":{"type":"slideshow-banner-with-card-home-page","settings":{"background_image":"shopify:\/\/shop_images\/home-farmer01.png","heading":"<h1><strong>creating Healthier Families and <\/strong><\/h1><h1><strong>Happy Farmers<\/strong><\/h1>","button_text":"About more","background_image2":"shopify:\/\/shop_images\/home-farmer02.png","heading2":"<h1><strong>Minimal Processing, Maximum Nutrition<\/strong><\/h1>","description2":"Our farmers work twice as hard as we do in order to deliver the best to you.","button_text2":"About more","background_image3":"shopify:\/\/shop_images\/home-farmer03.png","heading3":"<h1><strong>Authentic Food Prepared In Rural Areas<\/strong><\/h1>","description3":"By choosing healthy food, you're also helping to secure rural livelihoods.","button_text3":"About more"}},"featured_collection_788Crz":{"type":"featured-collection","settings":{"title":"Featured collection","heading_size":"h1","description":"","show_description":false,"description_style":"body","collection":"healthy-combo-packs","products_to_show":4,"columns_desktop":4,"full_width":false,"show_view_all":true,"view_all_style":"solid","enable_desktop_slider":false,"color_scheme":"","image_ratio":"adapt","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"quick_add":"standard","columns_mobile":"2","swipe_on_mobile":false,"padding_top":36,"padding_bottom":88}},"testimonials_qyabzq":{"type":"testimonials","blocks":{"column_HJBYRq":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/Minerva.png","title":"Minerva Thakur","text":"<p>A variety of ways to use my favourite coconut oil and honey. My skin feels nourished, my cuticles are soft, my lips are smooth, and many other benefits come from using them!<\/p>","link_label":"","link":""}},"column_cEaAxA":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/Maitrayee.png","title":"Lakshmi Dev","text":"<p>Their ghee helped solve my acid reflux problem. While cooking with wood pressed oils imparts a unique taste and I feel lighter<\/p>","link_label":"","link":""}},"column_pTnTWq":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/Neelam.png","title":"Dr Shagun Walia","text":"<p>This ghee is the most healthy option out there for children. I use it regularly for my daughter and she loves the taste<\/p>","link_label":"","link":""}},"column_MKpFmL":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/pankajtw.png","title":"Pankaj Tiwari","text":"<p>Works very well for holistic healing! This honey isn't your typical honey. It is very sweet and can tackle a sore throat like nobody's business :)<\/p>","link_label":"","link":""}},"column_mkGxPg":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/Untitled_3_5383a1f1-bf38-4f26-9b2e-70ebc5027714.png","title":"John","text":"<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>","link_label":"","link":""}},"column_rgphxX":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/Untitled_2_489afb6b-0d97-4ef2-9a9a-d92b3fcb2a4a.png","title":"Radha","text":"<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>","link_label":"","link":""}}},"block_order":["column_HJBYRq","column_cEaAxA","column_pTnTWq","column_MKpFmL","column_mkGxPg","column_rgphxX"],"custom_css":[".multicolumn-card__info {display: flex; flex-direction: column; justify-content: space-between; height: 100%; padding: 1rem;}",".multicolumn-list.slider {gap: 18px;}",".multicolumn-list__item {flex: 0 0 calc(33% - 1rem); max-width: calc(33.33% - 1rem); margin: 0px;}",".multicolumn-card__image-wrapper--third-width {width: 25%;}",".custom-testimonial-slider .multicolumn-list__item {background: none; padding: 10px; border: 1px solid grey; border-radius: 16px;}",".multicolumn-card.content-container {background: none;}"],"settings":{"title":"<strong>What Do Our Customers Say<\/strong>","heading_size":"h1","image_width":"third","image_ratio":"circle","columns_desktop":3,"column_alignment":"center","background_style":"primary","button_label":"Button label","button_link":"","color_scheme":"scheme-a832230c-fa13-4d33-9900-71ab4794372d","columns_mobile":"1","swipe_on_mobile":true,"padding_top":36,"padding_bottom":36,"testimonial_section_background":"#f8efd9","testimonial_background":"#ffffff","testimonial_title_color":"#206613","testimonials_text_color":"#000000","arrow_color":"#5d5f66","arrow_bg_color":"rgba(0,0,0,0)","slider_top_image":"shopify:\/\/shop_images\/heartinhand_90x_5921b190-e622-4e9f-bfe4-7effc8c027c6.png"}},"customer_service_section_penx9g":{"type":"customer-service-section","settings":{"sub_image1":"shopify:\/\/shop_images\/Neelam.png","sub_image2":"shopify:\/\/shop_images\/pankajtw.png","sub_image3":"shopify:\/\/shop_images\/ghee_customer_Moment_c2dcfa0f-5051-4548-a309-72b7183a7f4a.png","sub_image4":"shopify:\/\/shop_images\/Untitled_3_5383a1f1-bf38-4f26-9b2e-70ebc5027714.png","title":"Our Customer Service is 2X the industry standard","subtitle":"Get help on your queries, orders, and deliveries with our personal assistant, who's \nalways around to answer your questions","feature_icon_class1":"default-icon-class","feature_text1":"Available over WhatsApp\nor call","feature_icon_class2":"default-icon-class","feature_text2":"Continuous support\nthroughout your journey","feature_icon_class3":"default-icon-class","feature_text3":"Easily schedule reorders","feature_icon_class4":"default-icon-class","feature_text4":"Completely confidential\ncommunication"}},"text_and_button_in_row_eNjwGz":{"type":"text-and-button-in-row","settings":{"title-setting":"Looking to buy in bulk?","description-setting":"Our wholesale team is available and will assist you during the process.","button-title-setting":"Get in touch","background-color":"#206613","heading-color":"#ffffff","description-color":"#ffffff","button-bg-color":"#ffffff","button-text-color":"#206613"}},"social_media_images_home_section_rKWm9b":{"type":"social-media-images-home-section","blocks":{"image_N9qnkE":{"type":"image","settings":{"image_setting":"shopify:\/\/shop_images\/468032289_18107169001452513_984032743154394582_n.jpg"}},"image_MteqpL":{"type":"image","settings":{"image_setting":"shopify:\/\/shop_images\/467191693_18106796932452513_4713950792511781989_n.jpg"}},"image_EGNdme":{"type":"image","settings":{"image_setting":"shopify:\/\/shop_images\/467199824_18106564756452513_5029159989379802892_n.jpg"}},"image_dwappP":{"type":"image","settings":{"image_setting":"shopify:\/\/shop_images\/465571590_18106276096452513_9040526670228806684_n.jpg"}},"image_7REPLD":{"type":"image","settings":{"image_setting":"shopify:\/\/shop_images\/466412892_3914817262173013_5808658948199461657_n.jpg"}},"image_nXUFqX":{"type":"image","settings":{"image_setting":"shopify:\/\/shop_images\/465305323_1541605043204479_3587202263833308772_n.jpg"}},"image_cPEc4F":{"type":"image","settings":{"image_setting":"shopify:\/\/shop_images\/465194183_493255159839998_5307448787403692096_n.jpg"}},"image_8JpmRW":{"type":"image","settings":{"image_setting":"shopify:\/\/shop_images\/464256546_569102679023029_1599662236763845954_n.jpg"}},"image_LXqJYb":{"type":"image","settings":{"image_setting":"shopify:\/\/shop_images\/463289917_3852566564965615_7604798978543345557_n.jpg"}},"image_YfF8Wz":{"type":"image","settings":{"image_setting":"shopify:\/\/shop_images\/463182940_448590204352585_7551457058258033903_n.jpg"}}},"block_order":["image_N9qnkE","image_MteqpL","image_EGNdme","image_dwappP","image_7REPLD","image_nXUFqX","image_cPEc4F","image_8JpmRW","image_LXqJYb","image_YfF8Wz"],"settings":{"title_settings":"Join Us On Social Media","description_settings":"Health Tips, Recipes & More","background_color_settings":"#fcfcfc","title_color_settings":"#206613","description_color_settings":"#000000"}},"explore_full_range_section_home_page_VBmze3":{"type":"explore-full-range-section-home-page","settings":{"image_setting":"shopify:\/\/shop_images\/pixelcut-export.png","title_settings":"Explore Our Full Range","description_settings":"Explore our wide range of staples and fresh harvests. Experience the goodness of 100% natural farm essentials, delivered to your doorstep every day with Anveshan","background_color_settings":"#fcfcfc","title_color_settings":"#000000","description_color_settings":"#808080"}},"logo_slider_section_home_page_iNHwhK":{"type":"logo-slider-section-home-page","blocks":{"image_UeMHqD":{"type":"image","settings":{"image_settings":"shopify:\/\/shop_images\/logo1.jpg"}},"image_GHFfpm":{"type":"image","settings":{"image_settings":"shopify:\/\/shop_images\/logo2.png"}},"image_gx9UwV":{"type":"image","settings":{"image_settings":"shopify:\/\/shop_images\/logo3.png"}},"image_xA7jzX":{"type":"image","settings":{"image_settings":"shopify:\/\/shop_images\/logo4.png"}},"image_9z9TXE":{"type":"image","settings":{"image_settings":"shopify:\/\/shop_images\/logo5.png"}},"image_MkHjPe":{"type":"image","settings":{"image_settings":"shopify:\/\/shop_images\/IBO_Logo_Black_1.png"}},"image_69U4yM":{"type":"image","settings":{}},"image_YcBNq7":{"type":"image","settings":{"image_settings":"shopify:\/\/shop_images\/logo7.png"}},"image_E7QW66":{"type":"image","settings":{"image_settings":"shopify:\/\/shop_images\/logo1.jpg"}},"image_KJWyQD":{"type":"image","settings":{"image_settings":"shopify:\/\/shop_images\/logo3.png"}},"image_69ARaL":{"type":"image","settings":{"image_settings":"shopify:\/\/shop_images\/logo7.png"}},"image_DiTJRm":{"type":"image","settings":{"image_settings":"shopify:\/\/shop_images\/logo4.png"}},"image_JUMdXH":{"type":"image","settings":{"image_settings":"shopify:\/\/shop_images\/IBO_Logo_Black_1.png"}},"image_d9yHL9":{"type":"image","settings":{"image_settings":"shopify:\/\/shop_images\/logo5.png"}},"image_rdzGRk":{"type":"image","settings":{"image_settings":"shopify:\/\/shop_images\/logo3.png"}}},"block_order":["image_UeMHqD","image_GHFfpm","image_gx9UwV","image_xA7jzX","image_9z9TXE","image_MkHjPe","image_69U4yM","image_YcBNq7","image_E7QW66","image_KJWyQD","image_69ARaL","image_DiTJRm","image_JUMdXH","image_d9yHL9","image_rdzGRk"],"settings":{}},"hero_section_home_page_3TQDD9":{"type":"hero-section-home-page","blocks":{"image_kFX4TH":{"type":"image","settings":{"image_settings":"shopify:\/\/shop_images\/slide1.png"}},"image_dNTDaY":{"type":"image","settings":{"image_settings":"shopify:\/\/shop_images\/slide2.png"}},"image_fEPJzm":{"type":"image","settings":{"image_settings":"shopify:\/\/shop_images\/slide3.png"}},"image_hxkaN3":{"type":"image","settings":{"image_settings":"shopify:\/\/shop_images\/slide4.png"}},"image_8gMBiK":{"type":"image","settings":{"image_settings":"shopify:\/\/shop_images\/slide5.png"}}},"block_order":["image_kFX4TH","image_dNTDaY","image_fEPJzm","image_hxkaN3","image_8gMBiK"],"settings":{}}},"order":["custom_liquid_PK4HPW","slideshow_mhWkMq","featured_collection_YmjrzL","multicolumn_tLfNee","multicolumn_GzcYdn","featured_collection_jkNpkC","slideshow_banner_with_card_home_page_33hhPb","featured_collection_788Crz","testimonials_qyabzq","customer_service_section_penx9g","text_and_button_in_row_eNjwGz","social_media_images_home_section_rKWm9b","explore_full_range_section_home_page_VBmze3","logo_slider_section_home_page_iNHwhK","hero_section_home_page_3TQDD9"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_section_home_page_LzarMR": {
+      "type": "hero-section-home-page",
+      "blocks": {
+        "image_VQJFDw": {
+          "type": "image",
+          "settings": {
+            "image_settings": "shopify://shop_images/slide1.png"
+          }
+        },
+        "image_DcJbHi": {
+          "type": "image",
+          "settings": {
+            "image_settings": "shopify://shop_images/slide2.png"
+          }
+        },
+        "image_KewhkU": {
+          "type": "image",
+          "settings": {
+            "image_settings": "shopify://shop_images/slide3.png"
+          }
+        },
+        "image_MgWyJC": {
+          "type": "image",
+          "settings": {
+            "image_settings": "shopify://shop_images/slide4.png"
+          }
+        },
+        "image_HUUww6": {
+          "type": "image",
+          "settings": {
+            "image_settings": "shopify://shop_images/slide5.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_VQJFDw",
+        "image_DcJbHi",
+        "image_KewhkU",
+        "image_MgWyJC",
+        "image_HUUww6"
+      ],
+      "settings": {}
+    },
+    "product_collection_home_page_VapTPg": {
+      "type": "product-collection-home-page",
+      "settings": {
+        "collection": "anveshans-favorites",
+        "section_title_settings": "<strong>Anveshan's Favorites</strong>",
+        "title_color_settings": "#206613",
+        "mys_section_background_color_settings": "#f9f9f9"
+      }
+    },
+    "multicolumn_tLfNee": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_NF6tpt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/authenticity.png",
+            "title": "<strong>AUTHENTICITY</strong>",
+            "text": "<p>Bringing purest form of food direct from the farms</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_RnaCVc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/tradition-culture.png",
+            "title": "<strong>TRADITION</strong>",
+            "text": "<p>Harnessing age-old wisdom passed down by Grandmas</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ifpUHQ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/brutal-honesty.png",
+            "title": "<strong>HONESTY</strong>",
+            "text": "<p>Being 100% transparent & thoroughly lab-tested</p><p></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ykQfbb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/purpose.png",
+            "title": "<strong>PURPOSE</strong>",
+            "text": "<p>Empowering rural India with employment & fair trade</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_NF6tpt",
+        "column_RnaCVc",
+        "column_ifpUHQ",
+        "column_ykQfbb"
+      ],
+      "custom_css": [
+        ".multicolumn .title-wrapper-with-link {margin-top: 0; display: flex; justify-content: center;}",
+        ".multicolumn-card {position: relative; box-sizing: border-box; background-color: white; display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 36px;}",
+        ".multicolumn .title {margin: 0; color: #206613;}",
+        ".multicolumn .button {margin-top: 4rem; display: none;}"
+      ],
+      "settings": {
+        "title": "<strong>We Believe In</strong>",
+        "heading_size": "h1",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "scheme-e6d1ca08-7a0b-4f4c-9347-5d53f0bf0244",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 76
+      }
+    },
+    "product_display_with_pic_and_price_MUPwT6": {
+      "type": "product_display_with_pic_and_price",
+      "settings": {
+        "collection": "cook-with-anveshan",
+        "section_heading_settings": "<strong>Cook With Anveshan</strong>",
+        "section_heading_color_settings": "#206613"
+      }
+    },
+    "product_collection_home_page_axj7dM": {
+      "type": "product-collection-home-page",
+      "custom_css": [
+        ".pchpcs-anveshan-products {background-color: #f8efd9;}"
+      ],
+      "settings": {
+        "collection": "winter-special",
+        "section_title_settings": "<strong>Winter Special</strong>",
+        "title_color_settings": "#206613",
+        "mys_section_background_color_settings": "#f8efd9"
+      }
+    },
+    "slideshow_banner_with_card_home_page_33hhPb": {
+      "type": "slideshow-banner-with-card-home-page",
+      "settings": {
+        "background_image": "shopify://shop_images/home-farmer01.png",
+        "heading": "<h1><strong>creating Healthier Families and </strong></h1><h1><strong>Happy Farmers</strong></h1>",
+        "button_text": "About more",
+        "background_image2": "shopify://shop_images/home-farmer02.png",
+        "heading2": "<h1><strong>Minimal Processing, Maximum Nutrition</strong></h1>",
+        "description2": "Our farmers work twice as hard as we do in order to deliver the best to you.",
+        "button_text2": "About more",
+        "background_image3": "shopify://shop_images/home-farmer03.png",
+        "heading3": "<h1><strong>Authentic Food Prepared In Rural Areas</strong></h1>",
+        "description3": "By choosing healthy food, you're also helping to secure rural livelihoods.",
+        "button_text3": "About more"
+      }
+    },
+    "product_collection_home_page_Nzyg3E": {
+      "type": "product-collection-home-page",
+      "settings": {
+        "collection": "healthy-combo-packs",
+        "section_title_settings": "<strong>Healthy Combo Packs</strong>",
+        "title_color_settings": "#206613",
+        "mys_section_background_color_settings": "#f9f9f9"
+      }
+    },
+    "testimonials_qyabzq": {
+      "type": "testimonials",
+      "blocks": {
+        "column_HJBYRq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Minerva.png",
+            "title": "Minerva Thakur",
+            "text": "<p>A variety of ways to use my favourite coconut oil and honey. My skin feels nourished, my cuticles are soft, my lips are smooth, and many other benefits come from using them!</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_cEaAxA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Maitrayee.png",
+            "title": "Lakshmi Dev",
+            "text": "<p>Their ghee helped solve my acid reflux problem. While cooking with wood pressed oils imparts a unique taste and I feel lighter</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_pTnTWq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Neelam.png",
+            "title": "Dr Shagun Walia",
+            "text": "<p>This ghee is the most healthy option out there for children. I use it regularly for my daughter and she loves the taste</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_MKpFmL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/pankajtw.png",
+            "title": "Pankaj Tiwari",
+            "text": "<p>Works very well for holistic healing! This honey isn't your typical honey. It is very sweet and can tackle a sore throat like nobody's business :)</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_mkGxPg": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_3_5383a1f1-bf38-4f26-9b2e-70ebc5027714.png",
+            "title": "John",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_rgphxX": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_2_489afb6b-0d97-4ef2-9a9a-d92b3fcb2a4a.png",
+            "title": "Radha",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_HJBYRq",
+        "column_cEaAxA",
+        "column_pTnTWq",
+        "column_MKpFmL",
+        "column_mkGxPg",
+        "column_rgphxX"
+      ],
+      "custom_css": [
+        ".multicolumn-card__info {display: flex; flex-direction: column; justify-content: space-between; height: 100%; padding: 1rem;}",
+        ".multicolumn-list.slider {gap: 18px;}",
+        ".multicolumn-list__item {flex: 0 0 calc(33.1% - 1rem); max-width: calc(33.33% - 1rem); margin: 0px;}",
+        ".multicolumn-card__image-wrapper--third-width {width: 25%;}",
+        ".custom-testimonial-slider .multicolumn-list__item {background: none; padding: 10px; border: 1px solid grey; border-radius: 16px;}",
+        ".multicolumn-card.content-container {background: none;}"
+      ],
+      "settings": {
+        "title": "<strong>What Do Our Customers Say</strong>",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "circle",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "scheme-a832230c-fa13-4d33-9900-71ab4794372d",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "testimonial_section_background": "#f8efd9",
+        "testimonial_background": "#ffffff",
+        "testimonial_title_color": "#206613",
+        "testimonials_text_color": "#000000",
+        "arrow_color": "#5d5f66",
+        "arrow_bg_color": "rgba(0,0,0,0)",
+        "slider_top_image": "shopify://shop_images/heartinhand_90x_5921b190-e622-4e9f-bfe4-7effc8c027c6.png"
+      }
+    },
+    "customer_service_section_penx9g": {
+      "type": "customer-service-section",
+      "settings": {
+        "sub_image1": "shopify://shop_images/Neelam.png",
+        "sub_image2": "shopify://shop_images/pankajtw.png",
+        "sub_image3": "shopify://shop_images/ghee_customer_Moment_c2dcfa0f-5051-4548-a309-72b7183a7f4a.png",
+        "sub_image4": "shopify://shop_images/Untitled_3_5383a1f1-bf38-4f26-9b2e-70ebc5027714.png",
+        "title": "Our Customer Service is 2X the industry standard",
+        "subtitle": "Get help on your queries, orders, and deliveries with our personal assistant, who's \nalways around to answer your questions",
+        "feature_icon_class1": "default-icon-class",
+        "feature_text1": "Available over WhatsApp\nor call",
+        "feature_icon_class2": "default-icon-class",
+        "feature_text2": "Continuous support\nthroughout your journey",
+        "feature_icon_class3": "default-icon-class",
+        "feature_text3": "Easily schedule reorders",
+        "feature_icon_class4": "default-icon-class",
+        "feature_text4": "Completely confidential\ncommunication"
+      }
+    },
+    "text_and_button_in_row_eNjwGz": {
+      "type": "text-and-button-in-row",
+      "settings": {
+        "title-setting": "Looking to buy in bulk?",
+        "description-setting": "Our wholesale team is available and will assist you during the process.",
+        "button-title-setting": "Get in touch",
+        "background-color": "#206613",
+        "heading-color": "#ffffff",
+        "description-color": "#ffffff",
+        "button-bg-color": "#ffffff",
+        "button-text-color": "#206613"
+      }
+    },
+    "social_media_images_home_section_rKWm9b": {
+      "type": "social-media-images-home-section",
+      "blocks": {
+        "image_N9qnkE": {
+          "type": "image",
+          "settings": {
+            "image_setting": "shopify://shop_images/468032289_18107169001452513_984032743154394582_n.jpg"
+          }
+        },
+        "image_MteqpL": {
+          "type": "image",
+          "settings": {
+            "image_setting": "shopify://shop_images/467191693_18106796932452513_4713950792511781989_n.jpg"
+          }
+        },
+        "image_EGNdme": {
+          "type": "image",
+          "settings": {
+            "image_setting": "shopify://shop_images/467199824_18106564756452513_5029159989379802892_n.jpg"
+          }
+        },
+        "image_dwappP": {
+          "type": "image",
+          "settings": {
+            "image_setting": "shopify://shop_images/465571590_18106276096452513_9040526670228806684_n.jpg"
+          }
+        },
+        "image_7REPLD": {
+          "type": "image",
+          "settings": {
+            "image_setting": "shopify://shop_images/466412892_3914817262173013_5808658948199461657_n.jpg"
+          }
+        },
+        "image_nXUFqX": {
+          "type": "image",
+          "settings": {
+            "image_setting": "shopify://shop_images/465305323_1541605043204479_3587202263833308772_n.jpg"
+          }
+        },
+        "image_cPEc4F": {
+          "type": "image",
+          "settings": {
+            "image_setting": "shopify://shop_images/465194183_493255159839998_5307448787403692096_n.jpg"
+          }
+        },
+        "image_8JpmRW": {
+          "type": "image",
+          "settings": {
+            "image_setting": "shopify://shop_images/464256546_569102679023029_1599662236763845954_n.jpg"
+          }
+        },
+        "image_LXqJYb": {
+          "type": "image",
+          "settings": {
+            "image_setting": "shopify://shop_images/463289917_3852566564965615_7604798978543345557_n.jpg"
+          }
+        },
+        "image_YfF8Wz": {
+          "type": "image",
+          "settings": {
+            "image_setting": "shopify://shop_images/463182940_448590204352585_7551457058258033903_n.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_N9qnkE",
+        "image_MteqpL",
+        "image_EGNdme",
+        "image_dwappP",
+        "image_7REPLD",
+        "image_nXUFqX",
+        "image_cPEc4F",
+        "image_8JpmRW",
+        "image_LXqJYb",
+        "image_YfF8Wz"
+      ],
+      "settings": {
+        "title_settings": "Join Us On Social Media",
+        "description_settings": "Health Tips, Recipes & More",
+        "background_color_settings": "#fcfcfc",
+        "title_color_settings": "#206613",
+        "description_color_settings": "#000000"
+      }
+    },
+    "explore_full_range_section_home_page_VBmze3": {
+      "type": "explore-full-range-section-home-page",
+      "settings": {
+        "image_setting": "shopify://shop_images/pixelcut-export.png",
+        "title_settings": "Explore Our Full Range",
+        "description_settings": "Explore our wide range of staples and fresh harvests. Experience the goodness of 100% natural farm essentials, delivered to your doorstep every day with Anveshan",
+        "background_color_settings": "#fcfcfc",
+        "title_color_settings": "#000000",
+        "description_color_settings": "#808080"
+      }
+    },
+    "logo_slider_section_home_page_iNHwhK": {
+      "type": "logo-slider-section-home-page",
+      "blocks": {
+        "image_UeMHqD": {
+          "type": "image",
+          "settings": {
+            "image_settings": "shopify://shop_images/logo1.jpg"
+          }
+        },
+        "image_GHFfpm": {
+          "type": "image",
+          "settings": {
+            "image_settings": "shopify://shop_images/logo2.png"
+          }
+        },
+        "image_gx9UwV": {
+          "type": "image",
+          "settings": {
+            "image_settings": "shopify://shop_images/logo3.png"
+          }
+        },
+        "image_xA7jzX": {
+          "type": "image",
+          "settings": {
+            "image_settings": "shopify://shop_images/logo4.png"
+          }
+        },
+        "image_9z9TXE": {
+          "type": "image",
+          "settings": {
+            "image_settings": "shopify://shop_images/logo5.png"
+          }
+        },
+        "image_MkHjPe": {
+          "type": "image",
+          "settings": {
+            "image_settings": "shopify://shop_images/IBO_Logo_Black_1.png"
+          }
+        },
+        "image_69U4yM": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_YcBNq7": {
+          "type": "image",
+          "settings": {
+            "image_settings": "shopify://shop_images/logo7.png"
+          }
+        },
+        "image_E7QW66": {
+          "type": "image",
+          "settings": {
+            "image_settings": "shopify://shop_images/logo1.jpg"
+          }
+        },
+        "image_KJWyQD": {
+          "type": "image",
+          "settings": {
+            "image_settings": "shopify://shop_images/logo3.png"
+          }
+        },
+        "image_69ARaL": {
+          "type": "image",
+          "settings": {
+            "image_settings": "shopify://shop_images/logo7.png"
+          }
+        },
+        "image_DiTJRm": {
+          "type": "image",
+          "settings": {
+            "image_settings": "shopify://shop_images/logo4.png"
+          }
+        },
+        "image_JUMdXH": {
+          "type": "image",
+          "settings": {
+            "image_settings": "shopify://shop_images/IBO_Logo_Black_1.png"
+          }
+        },
+        "image_d9yHL9": {
+          "type": "image",
+          "settings": {
+            "image_settings": "shopify://shop_images/logo5.png"
+          }
+        },
+        "image_rdzGRk": {
+          "type": "image",
+          "settings": {
+            "image_settings": "shopify://shop_images/logo3.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_UeMHqD",
+        "image_GHFfpm",
+        "image_gx9UwV",
+        "image_xA7jzX",
+        "image_9z9TXE",
+        "image_MkHjPe",
+        "image_69U4yM",
+        "image_YcBNq7",
+        "image_E7QW66",
+        "image_KJWyQD",
+        "image_69ARaL",
+        "image_DiTJRm",
+        "image_JUMdXH",
+        "image_d9yHL9",
+        "image_rdzGRk"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "hero_section_home_page_LzarMR",
+    "product_collection_home_page_VapTPg",
+    "multicolumn_tLfNee",
+    "product_display_with_pic_and_price_MUPwT6",
+    "product_collection_home_page_axj7dM",
+    "slideshow_banner_with_card_home_page_33hhPb",
+    "product_collection_home_page_Nzyg3E",
+    "testimonials_qyabzq",
+    "customer_service_section_penx9g",
+    "text_and_button_in_row_eNjwGz",
+    "social_media_images_home_section_rKWm9b",
+    "explore_full_range_section_home_page_VBmze3",
+    "logo_slider_section_home_page_iNHwhK"
+  ]
+}

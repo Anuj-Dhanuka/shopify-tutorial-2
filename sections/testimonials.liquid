@@ -3,67 +3,66 @@
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 
 <style>
-.custom-testimonial-slider.multicolumn .title,
-.custom-testimonial-slider.multicolumn .subtitle {
-  color: {{ section.settings.testimonial_title_color }}
-}
-.custom-testimonial-slider .multicolumn-card__info h3,
-.custom-testimonial-slider .multicolumn-card__info p {
-  color: {{ section.settings.testimonials_text_color }};
-}
-.custom-testimonial-slider.multicolumn {
-  padding: 35px 0px;
-  background: {{ section.settings.testimonial_section_background }};
-}
-.custom-testimonial-slider .multicolumn-list__item {
-  background: {{ section.settings.testimonial_background }};
-}
-.custom-testimonial-slider .slider-buttons .slider-button.slider-button--next,
-.custom-testimonial-slider .slider-buttons .slider-button.slider-button--prev {
-  background: {{ section.settings.arrow_bg_color }};
-  border-radius: 50%;
-  padding-left: 0;
-  padding-right: 0;
-}
-.custom-testimonial-slider .slider-buttons .slider-button.slider-button--next svg,
-.custom-testimonial-slider .slider-buttons .slider-button.slider-button--prev svg {
-  color: {{ section.settings.arrow_color }};
-}
-.custom-testimonial-slider .slider.slider--mobile {
-  overflow-y: hidden;
-  column-gap: unset;
-}
-.custom-testimonial-slider .slider-buttons {
-  display: flex !important;
-} 
-  
+  .custom-testimonial-slider.multicolumn .title,
+  .custom-testimonial-slider.multicolumn .subtitle {
+    color: {{ section.settings.testimonial_title_color }}
+  }
+  .custom-testimonial-slider .multicolumn-card__info h3,
+  .custom-testimonial-slider .multicolumn-card__info p {
+    color: {{ section.settings.testimonials_text_color }};
+  }
+  .custom-testimonial-slider.multicolumn {
+    padding: 35px 0px;
+    background: {{ section.settings.testimonial_section_background }};
+  }
+  .custom-testimonial-slider .multicolumn-list__item {
+    background: {{ section.settings.testimonial_background }};
+  }
+  .custom-testimonial-slider .slider-buttons .slider-button.slider-button--next,
+  .custom-testimonial-slider .slider-buttons .slider-button.slider-button--prev {
+    background: {{ section.settings.arrow_bg_color }};
+    border-radius: 50%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .custom-testimonial-slider .slider-buttons .slider-button.slider-button--next svg,
+  .custom-testimonial-slider .slider-buttons .slider-button.slider-button--prev svg {
+    color: {{ section.settings.arrow_color }};
+  }
+  .custom-testimonial-slider .slider.slider--mobile {
+    overflow-y: hidden;
+    column-gap: unset;
+  }
+  .custom-testimonial-slider .slider-buttons {
+    display: flex !important;
+  }
 </style>
 
 {%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-  .multicolumn .title-wrapper-with-link {
-  margin-top: 0;
-  display: flex;
-  justify-content: center;
-}
-  .multicolumn .button {
-  margin-top: 4rem;
-  display: none;
-}
-  .multicolumn .title {
-  margin: 0;
-  color: #206613;
-}
-
-  @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
+    .multicolumn .title-wrapper-with-link {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
   }
+    .multicolumn .button {
+    margin-top: 4rem;
+    display: none;
+  }
+    .multicolumn .title {
+    margin: 0;
+    color: #206613;
+  }
+
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
 {%- endstyle -%}
 
 {%- liquid
@@ -75,7 +74,6 @@
 -%}
 
 <div class="custom-testimonial-slider multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
-  
   <div
     class="page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     {% if settings.animations_reveal_on_scroll %}
@@ -83,19 +81,19 @@
     {% endif %}
   >
     {%- if section.settings.slider_top_image -%}
-  <div class="slider-top-image-wrapper">
-    {% if section.settings.slider_top_image and section.settings.slider_top_image != blank %}
-  {{ section.settings.slider_top_image | image_url: width: 80 | image_tag: class: 'slider-top-image-img', alt: 'Slider Top Image' }}
-{% endif %}
-
-
-
-  </div>
-{%- endif -%}
+      <div class="slider-top-image-wrapper">
+        {% if section.settings.slider_top_image and section.settings.slider_top_image != blank %}
+          {{
+            section.settings.slider_top_image
+            | image_url: width: 80
+            | image_tag: class: 'slider-top-image-img', alt: 'Slider Top Image'
+          }}
+        {% endif %}
+      </div>
+    {%- endif -%}
 
     {%- unless section.settings.title == blank -%}
       <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin multicolumn__title">
-        
         <h2 class="title inline-richtext {{ section.settings.heading_size }}">
           {{ section.settings.title }}
         </h2>
@@ -140,77 +138,77 @@
             {% endif %}
           >
             <div class="multicolumn-card content-container">
-              
-              
               <div class="multicolumn-card__info">
                 {%- if block.settings.text != blank -%}
                   <div class="rte">{{ block.settings.text }}</div>
                 {%- endif -%}
                 {%- if block.settings.image != blank -%}
-                {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
-                  {% assign spaced_image = true %}
-                {% endif %}
-                <div class="image-and-name-container">
-                <div style="margin-right: 0px; margin-left: 0px;" class="image-name-content-container multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
-                  <div
-                    class="media media--transparent media--{{ section.settings.image_ratio }}"
-                    {% if section.settings.image_ratio == 'adapt' %}
-                      style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
-                    {% endif %}
-                  >
-                    {%- liquid
-                      assign number_of_columns = section.settings.columns_desktop
-                      assign number_of_columns_mobile = section.settings.columns_mobile
-                      assign grid_space_desktop = number_of_columns | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
-                      assign grid_space_tablet = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
-                      assign grid_space_mobile = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | divided_by: 2 | plus: 30 | append: 'px'
-                      if section.settings.image_width == 'half'
-                        assign image_width = 0.5
-                      elsif section.settings.image_width == 'third'
-                        assign image_width = 0.33
-                      else
-                        assign image_width = 1
-                      endif
-                    -%}
-                    {% capture sizes %}
+                  {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
+                    {% assign spaced_image = true %}
+                  {% endif %}
+                  <div class="image-and-name-container">
+                    <div
+                      style="margin-right: 0px; margin-left: 0px;"
+                      class="image-name-content-container multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}"
+                    >
+                      <div
+                        class="media media--transparent media--{{ section.settings.image_ratio }}"
+                        {% if section.settings.image_ratio == 'adapt' %}
+                          style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
+                        {% endif %}
+                      >
+                        {%- liquid
+                          assign number_of_columns = section.settings.columns_desktop
+                          assign number_of_columns_mobile = section.settings.columns_mobile
+                          assign grid_space_desktop = number_of_columns | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
+                          assign grid_space_tablet = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
+                          assign grid_space_mobile = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | divided_by: 2 | plus: 30 | append: 'px'
+                          if section.settings.image_width == 'half'
+                            assign image_width = 0.5
+                          elsif section.settings.image_width == 'third'
+                            assign image_width = 0.33
+                          else
+                            assign image_width = 1
+                          endif
+                        -%}
+                        {% capture sizes %}
                       (min-width: {{ settings.page_width }}px) calc(({{ settings.page_width }}px - {{ grid_space_desktop }}) * {{ image_width }} /  {{ number_of_columns }}),
                       (min-width: 990px) calc((100vw - {{ grid_space_desktop }}) * {{ image_width }} / {{ number_of_columns }}),
                       (min-width: 750px) calc((100vw - {{ grid_space_tablet }}) * {{ image_width }} / {{ number_of_columns_mobile }}),
                       calc((100vw - {{ grid_space_mobile }}) * {{ image_width }} / {{ number_of_columns_mobile }})
                     {% endcapture %}
-                    {{
-                      block.settings.image
-                      | image_url: width: 3200
-                      | image_tag:
-                        widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
-                        sizes: sizes,
-                        class: 'multicolumn-card__image'
-                    }}
-                  </div>
-                  
-                </div>
-                  <div class="name-stars">
-                    <p class="name">{{ block.settings.title }}</p>
-                    <div class="stars">
-                      <span>⭐⭐⭐⭐⭐</span>
+                        {{
+                          block.settings.image
+                          | image_url: width: 3200
+                          | image_tag:
+                            widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
+                            sizes: sizes,
+                            class: 'multicolumn-card__image'
+                        }}
+                      </div>
+                    </div>
+                    <div class="name-stars">
+                      <p class="name">{{ block.settings.title }}</p>
+                      <div class="stars">
+                        <span>⭐⭐⭐⭐⭐</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              {%- endif -%}
+                {%- endif -%}
                 {%- if block.settings.link_label != blank -%}
-              <div class="center{% if show_mobile_slider %} small-hide medium-hide{% endif %}">
-                  <a
+                  <div class="center{% if show_mobile_slider %} small-hide medium-hide{% endif %}">
+                    <a
                       class="button button--primary"
                       {% if block.settings.link == blank %}
-                      role="link" aria-disabled="true"
+                        role="link" aria-disabled="true"
                       {% else %}
-                      href="{{ block.settings.link }}"
+                        href="{{ block.settings.link }}"
                       {% endif %}
-                  >
+                    >
                       {{ block.settings.link_label | escape }}
-                  </a>
-              </div>
-        {%- endif -%}
+                    </a>
+                  </div>
+                {%- endif -%}
               </div>
             </div>
           </li>
@@ -262,7 +260,7 @@
       "default": "Testimonials",
       "label": "Testimonials"
     },
-    
+
     {
       "type": "select",
       "id": "heading_size",
@@ -444,48 +442,46 @@
       "default": 36
     },
     {
-    "type": "color",
-    "id": "testimonial_section_background",
-    "label": "Section background",
-    "default": "#eaeaea"
-},
-{
-    "type": "color",
-    "id": "testimonial_background",
-    "label": "Testimonial background",
-    "default": "#fff"
-},
-{
-    "type": "color",
-    "id": "testimonial_title_color",
-    "label": "Title text color",
-    "default": "#000"
-},
-{
-    "type": "color",
-    "id": "testimonials_text_color",
-    "label": "Testimonials text color",
-    "default": "#000"
-},
-{
-    "type": "color",
-    "id": "arrow_color",
-    "label": "Arrow color",
-    "default": "#fff"
-},
-{
-    "type": "color",
-    "id": "arrow_bg_color",
-    "label": "Arrow background",
-    "default": "#000"
-},
+      "type": "color",
+      "id": "testimonial_section_background",
+      "label": "Section background",
+      "default": "#eaeaea"
+    },
     {
-  "type": "image_picker",
-  "id": "slider_top_image",
-  "label": "Top Image for Slider"
-}
-
-
+      "type": "color",
+      "id": "testimonial_background",
+      "label": "Testimonial background",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "testimonial_title_color",
+      "label": "Title text color",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "testimonials_text_color",
+      "label": "Testimonials text color",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "arrow_color",
+      "label": "Arrow color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "arrow_bg_color",
+      "label": "Arrow background",
+      "default": "#000"
+    },
+    {
+      "type": "image_picker",
+      "id": "slider_top_image",
+      "label": "Top Image for Slider"
+    }
   ],
   "blocks": [
     {

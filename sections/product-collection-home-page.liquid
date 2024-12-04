@@ -1,0 +1,398 @@
+<style>
+    .pchpcs-anveshan-products {
+      padding: 36px 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: {{ section.settings.mys_section_background_color_settings }};
+    }
+
+    .pchpcs-anveshan-products h2 {
+      text-align: center;
+      margin-bottom: 24px;
+      margin-top: 0px;
+      font-size: 40px;
+      color: {{ section.settings.title_color_settings }};
+    }
+
+    .pchpcs-product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      overflow: none;
+      width: 100%;
+    }
+
+    .pchpcs-product-card {
+      background: #fff;
+      border-radius: 2rem 2rem 7rem 2rem;
+      padding: 20px;
+      width: 24%;
+      text-align: center;
+    }
+
+    .pchpcs-image-container {
+      position: relative;
+    }
+
+    .pchpcs-bestseller-badge {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2px;
+      top: 5px;
+      left: 0px;
+      background-color: #1d639f;
+      color: white;
+      padding: 0px 8px;
+      font-size: 10px;
+      font-weight: 600;
+      border-top-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      border-top-right-radius: 16px;
+    }
+
+    .pchpcs-bestseller-badge img {
+      filter: brightness(0) invert(1);
+    }
+
+    .pchpcs-discount-badge {
+      position: absolute;
+      top: 5px;
+      right: 0px;
+      background-color: #206613;
+      color: white;
+      padding: 0px 8px;
+      border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
+      border-top-right-radius: 16px;
+      font-size: 10px;
+      font-weight: 600;
+    }
+
+    .pchpcs-product-card-img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+    }
+
+    @keyframes zoomOut {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(1.03);
+      }
+    }
+
+    .pchpcs-product-card-img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+    }
+
+    .pchpcs-image-container:hover .pchpcs-product-card-img {
+      animation: zoomOut 1.2s ease-in-out;
+      background-color: #fff;
+    }
+
+    .pcphcs-content-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .pchpcs-variant-name {
+      font-size: 14px;
+      color: #555;
+      margin-top: 5px;
+      margin-bottom: 0px;
+    }
+
+    .pcphcs-content-container h3 {
+      font-size: 18px;
+      color: #000000;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      font-weight: 500;
+    }
+
+    .pcphcs-content-container .pchpcs-price {
+      font-size: 20px;
+      color: #444;
+      margin-top: 8px;
+      margin-bottom: 0px;
+    }
+
+    .pchpcs-current-price {
+      font-weight: bold;
+      color: #000;
+    }
+
+    .pchpcs-original-price {
+      font-size: 14px;
+      text-decoration: line-through;
+      margin-left: 8px;
+      color: #999;
+    }
+
+    .pchpcs-product-card .pchpcs-rating {
+      display: flex;
+      align-items: center;
+      margin-top: 8px;
+      margin-bottom: 0px;
+      font-size: 14px;
+      color: #f2cb05;
+    }
+
+    .pchpcs-review-count {
+      color: #333;
+      margin-left: 8px;
+      font-size: 16px;
+    }
+
+    .pchpcs-product-card .pchpcs-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      margin-top: 16px;
+    }
+
+    .pchpcs-product-card .pchpcs-btn,
+    .pchpcs-product-card .pchpcs-btn-secondary {
+      width: 160px;
+      height: 28px;
+      font-weight: 500;
+      padding: 0px 0px;
+      border-radius: 28px;
+      font-size: 14px;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .pchpcs-btn p {
+      margin: 0;
+    }
+
+    .pchpcs-product-card .pchpcs-btn {
+      background-color: #206613;
+      color: white;
+      border: none;
+    }
+
+    .pchpcs-product-card .pchpcs-btn-secondary {
+      background-color: transparent;
+      border: 1px solid #206613;
+      color: #206613;
+    }
+
+    @media (min-width: 1024px) {
+      .pchpcs-product-grid {
+        width: 1400px;
+      }
+    }
+
+    @media (max-width: 1023px) {
+      .pchpcs-product-grid {
+        gap: 16px;
+      }
+
+      .pchpcs-product-card {
+        width: 45%;
+      }
+
+      .pchpcs-anveshan-products h2 {
+        font-size: 36px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .pchpcs-product-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .pchpcs-product-card {
+        width: 100%;
+      }
+
+      .pchpcs-anveshan-products h2 {
+        font-size: 32px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .pchpcs-anveshan-products h2 {
+        font-size: 28px;
+      }
+
+      .pchpcs-btn,
+      .pchpcs-btn-secondary {
+        width: 140px;
+        font-size: 12px;
+      }
+
+      .pcphcs-content-container h3 {
+        font-size: 16px;
+      }
+    }
+</style>
+
+{% assign rating_star_size = 18 %}
+
+<!-- anveshan-products.liquid -->
+<section class="pchpcs-anveshan-products">
+  <div class="pchpcs-container">
+    <h2>{{ section.settings.section_title_settings }}</h2>
+    {% comment %} <p style="color: red; text-align: center;">{{ section.settings.mys_section_background_color_settings }}</p>
+    <p style="color: red; text-align: center;">{{ section.settings.title_color_settings }}</p> {% endcomment %}
+
+    <!-- Product Grid -->
+    <div class="pchpcs-product-grid">
+      {% if section.settings.collection != blank %}
+        {% for product in collections[section.settings.collection].products limit: 4 %}
+          {% assign price_difference = product.compare_at_price | minus: product.price %}
+          {% assign discount_percentage = price_difference
+            | times: 100
+            | divided_by: product.compare_at_price
+            | round
+          %}
+
+          <div class="pchpcs-product-card">
+            {% if product.featured_image %}
+              <div class="pchpcs-image-container">
+                {{ product.featured_image | image_url: width: 400 | image_tag: class: 'pchpcs-product-card-img' }}
+
+                {% if forloop.index <= 2 %}
+                  <div class="pchpcs-bestseller-badge">
+                    <img
+                      src="{{'star-fill-icon.svg' | asset_url}}"
+                      alt="star"
+                      width="14"
+                      height="14"
+                    >
+                    <span>Best Seller</span>
+                  </div>
+                {% endif %}
+
+                {% if product.compare_at_price > product.price %}
+                  <div class="pchpcs-discount-badge">
+                    <span>{{ discount_percentage }}% off</span>
+                  </div>
+                {% endif %}
+              </div>
+            {% endif %}
+            <div class="pcphcs-content-container">
+              {% if product.variants.size > 1 %}
+                <p class="pchpcs-variant-name">{{ product.variants.first.title }}</p>
+              {% endif %}
+              <h3>{{ product.title }}</h3>
+              <div class="pchpcs-rating">
+                <img
+                  src="{{'star-fill-icon.svg' | asset_url}}"
+                  alt="star"
+                  width="{{ rating_star_size }}"
+                  height="{{ rating_star_size }}"
+                >
+                <img
+                  src="{{'star-fill-icon.svg' | asset_url}}"
+                  alt="star"
+                  width="{{ rating_star_size }}"
+                  height="{{ rating_star_size }}"
+                >
+                <img
+                  src="{{'star-fill-icon.svg' | asset_url}}"
+                  alt="star"
+                  width="{{ rating_star_size }}"
+                  height="{{ rating_star_size }}"
+                >
+                <img
+                  src="{{'star-fill-icon.svg' | asset_url}}"
+                  alt="star"
+                  width="{{ rating_star_size }}"
+                  height="{{ rating_star_size }}"
+                >
+                <img
+                  src="{{'star-fill-icon.svg' | asset_url}}"
+                  alt="star"
+                  width="{{ rating_star_size }}"
+                  height="{{ rating_star_size }}"
+                >
+                <span class="pchpcs-review-count">
+                  {{- product.metafields.custom.reviews_count | default: 0 }} reviews</span
+                >
+              </div>
+              <p class="pchpcs-price">
+                <span class="pchpcs-current-price">₹{{ product.price | divided_by: 100 }}</span>
+                {% if product.compare_at_price > product.price %}
+                  <span class="pchpcs-original-price">₹{{ product.compare_at_price | divided_by: 100 }}</span>
+                {% endif %}
+              </p>
+            </div>
+            <div class="pchpcs-buttons">
+              <a href="{{ product.url }}" class="pchpcs-btn">
+                <img
+                  src="{{ 'cart-line-icon-home-product.svg' | asset_url }}"
+                  alt="cart"
+                  width="16"
+                  height="16"
+                >
+                <p>Add to Cart</p>
+              </a>
+              <a href="{{ product.url }}" class="pchpcs-btn-secondary">
+                <img
+                  src="{{'energy-charge-icon.svg' | asset_url}}"
+                  alt="cart"
+                  width="16"
+                  height="16"
+                >
+                <p>Buy Now</p>
+              </a>
+            </div>
+          </div>
+        {% endfor %}
+      {% else %}
+        <p>Please select a collection to display products.</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product Collections",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Choose a Collection"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "section_title_settings",
+      "label": "Collection Title"
+    },
+    {
+      "type": "color",
+      "label": "Title Color",
+      "id": "title_color_settings",
+    },
+    {
+      "type": "color",
+      "label": "Background Color",
+      "id": "mys_section_background_color_settings",
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Collections Custom Section",
+      "category": "Custom Section",
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,134 @@
+<style>
+  .pdwpap-section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 50px;
+  margin: 0px;
+  }
+
+  .pdwpap-section-heading {
+  margin-top: 0px;
+  margin-bottom: 24px;
+  color: {{ section.settings.section_heading_color_settings }}
+  }
+
+  .pdwpap-images-section-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+
+  .pdwpap-image-content-container {
+  width: 220px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  border: 1px solid #e8e8e8;
+  }
+
+  .pdwpap-long-image {
+  width: 100%;
+  height: 350px;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+  margin-bottom: 0px;
+  }
+
+  .pdwpap-content-container {
+  position: relative;
+  height: 120px;
+  padding: 10px;
+  text-align: center;
+  }
+
+  .pdwpap-product-title {
+  color: #000000;
+  font-weight: 500;
+  margin-bottom: 8px;
+  margin-top: 16px;
+  font-size: 16px;
+  }
+
+  .pdwpap-price {
+  color: #000000;
+  font-weight: 500;
+  margin-top: 0px;
+  font-size: 16px;
+  }
+
+  .pdwpap-original-price {
+  text-decoration: line-through;
+  }
+
+  .pdwpap-product-card-img {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: -10px;
+  width: 50px;
+  height: 50px;
+  }
+
+  @media (min-width: 1024px) {
+      .pdwpap-images-section-container {
+          width: 1400px;
+      }
+  }
+</style>
+
+<div class="pdwpap-section-container">
+  <h1 class="pdwpap-section-heading">{{ section.settings.section_heading_settings }}</h1>
+  <div class="pdwpap-images-section-container">
+    {% if section.settings.collection != blank %}
+      {% for product in collections[section.settings.collection].products limit: 6 %}
+        <div class="pdwpap-image-content-container">
+          {{ product.featured_image | image_url: width: 400 | image_tag: class: 'pdwpap-long-image' }}
+          <div class="pdwpap-content-container">
+            {{
+              product.featured_image
+              | image_url: width: 100, height: 100
+              | image_tag: class: 'pdwpap-product-card-img'
+            }}
+            <h3 class="pdwpap-product-title">{{ product.title }}</h3>
+            <p class="pdwpap-price">
+              <span class="pdwpap-current-price">₹{{ product.price | divided_by: 100 }}</span>
+              {% if product.compare_at_price > product.price %}
+                <span class="pdwpap-original-price">₹{{ product.compare_at_price | divided_by: 100 }}</span>
+              {% endif %}
+            </p>
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Cook With Anveshan",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Choose a Collection"
+    },
+    {
+      "type": "inline_richtext",
+      "label": "Section Heading",
+      "id": "section_heading_settings"
+    },
+    {
+      "type": "color",
+      "label": "Heading Color",
+      "id": "section_heading_color_settings"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Cook eith Anveshan",
+      "category": "Custom Section"
+    }
+  ]
+}
+{% endschema %}

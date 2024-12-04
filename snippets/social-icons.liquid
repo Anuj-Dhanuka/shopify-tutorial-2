@@ -9,6 +9,14 @@
   %}
 {% endcomment %}
 
+<style>
+  .list-social__item {
+    background-color: #D4C398;
+    margin-right: 12px;
+    border-radius: 100%;
+  }
+</style>
+
 <ul class="list-unstyled list-social{% if class %} {{ class}}{% endif %}" role="list">
   {%- if settings.social_facebook_link != blank -%}
     <li class="list-social__item">

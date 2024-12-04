@@ -32,6 +32,7 @@
 
 .multicolumn-card__image-wrapper--third-width {
   width: 33%;
+  
 }
 
 .multicolumn-card__image-wrapper--half-width {
@@ -42,6 +43,7 @@
 .multicolumn-list__item:only-child {
   margin-left: auto;
   margin-right: auto;
+  
 }
 
 .multicolumn .button {
@@ -58,6 +60,7 @@
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
+
 }
 
 .multicolumn-list__item:only-child {
@@ -316,7 +319,7 @@
   width: 100px;
   position: absolute;
   top: -70px;
-  left: 460px;
+  left: 700px;
 }
 
 .slider-top-image {
