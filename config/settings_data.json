@@ -211,11 +211,11 @@
       },
       "scheme-f06475a0-65b6-4809-a1ca-126496337b28": {
         "settings": {
-          "background": "#206613",
+          "background": "#00584b",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",
-          "button_label": "#206613",
+          "button_label": "#00584b",
           "secondary_button_label": "#121212",
           "shadow": "#121212"
         }
@@ -277,7 +277,7 @@
       },
       "scheme-a832230c-fa13-4d33-9900-71ab4794372d": {
         "settings": {
-          "background": "#f8efd9",
+          "background": "#fffbe8",
           "background_gradient": "",
           "text": "#121212",
           "button": "#121212",
@@ -288,7 +288,7 @@
       },
       "scheme-7fb18efc-df90-4054-8512-a195ccee780d": {
         "settings": {
-          "background": "#206613",
+          "background": "#00584b",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#d4c398",

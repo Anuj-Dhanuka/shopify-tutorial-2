@@ -55,7 +55,7 @@
       "type": "header",
       "custom_css": [
         ".element.style {width: 170px;}",
-        ".header__icon {color: #206613;}",
+        ".header__icon {color: #00584b;}",
         ".header__icon,.header__icon--cart .icon {height: auto; width: 3rem; padding: 0px; margin-left: 16px;}",
         ".svg-wrapper > svg {height: auto; width: 3rem;}",
         ".header__icon .icon {height: auto; width: 2.5rem; fill: none; margin-right: 9px;}"

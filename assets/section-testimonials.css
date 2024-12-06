@@ -230,6 +230,10 @@
   white-space: nowrap;
 }
 
+.multicolumn-card .content-container {
+  background-color: red;
+}
+
 @media screen and (min-width: 990px) {
   .multicolumn-list__item--empty {
     display: list-item;
@@ -336,3 +340,17 @@
   border-radius: 500px;
 }
 
+.custom-testimonial-slider .multicolumn-list__item {
+  
+
+}
+
+.multicolumn-card.content-container {
+
+}
+
+.multicolumn-custom-card-container {
+  border: 1px solid #00584b;
+  border-radius: 16px;
+  border-bottom-right-radius: 40px;
+}

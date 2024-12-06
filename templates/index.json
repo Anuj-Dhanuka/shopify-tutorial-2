@@ -57,7 +57,7 @@
       "settings": {
         "collection": "anveshans-favorites",
         "section_title_settings": "<strong>Anveshan's Favorites</strong>",
-        "title_color_settings": "#206613",
+        "title_color_settings": "#00584b",
         "mys_section_background_color_settings": "#f9f9f9"
       }
     },
@@ -114,8 +114,9 @@
       "custom_css": [
         ".multicolumn .title-wrapper-with-link {margin-top: 0; display: flex; justify-content: center;}",
         ".multicolumn-card {position: relative; box-sizing: border-box; background-color: white; display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 36px;}",
-        ".multicolumn .title {margin: 0; color: #206613;}",
-        ".multicolumn .button {margin-top: 4rem; display: none;}"
+        ".multicolumn .title {margin: 0; color: #00584b;}",
+        ".multicolumn .button {margin-top: 4rem; display: none;}",
+        ".multicolumn-card.content-container {border: none;}"
       ],
       "settings": {
         "title": "<strong>We Believe In</strong>",
@@ -139,18 +140,19 @@
       "settings": {
         "collection": "cook-with-anveshan",
         "section_heading_settings": "<strong>Cook With Anveshan</strong>",
-        "section_heading_color_settings": "#206613"
+        "section_heading_color_settings": "#00584b",
+        "video_settings": "https://youtu.be/H-G5LBzn8SA?si=6TqocX_ENEQpQctw"
       }
     },
     "product_collection_home_page_axj7dM": {
       "type": "product-collection-home-page",
       "custom_css": [
-        ".pchpcs-anveshan-products {background-color: #f8efd9;}"
+        ".pchpcs-anveshan-products {background-color: #fffbe8;}"
       ],
       "settings": {
         "collection": "winter-special",
         "section_title_settings": "<strong>Winter Special</strong>",
-        "title_color_settings": "#206613",
+        "title_color_settings": "#00584b",
         "mys_section_background_color_settings": "#f8efd9"
       }
     },
@@ -256,8 +258,7 @@
         ".multicolumn-list.slider {gap: 18px;}",
         ".multicolumn-list__item {flex: 0 0 calc(33.1% - 1rem); max-width: calc(33.33% - 1rem); margin: 0px;}",
         ".multicolumn-card__image-wrapper--third-width {width: 25%;}",
-        ".custom-testimonial-slider .multicolumn-list__item {background: none; padding: 10px; border: 1px solid grey; border-radius: 16px;}",
-        ".multicolumn-card.content-container {background: none;}"
+        ".custom-testimonial-slider .multicolumn-list__item {background: none; box-shadow: none;}"
       ],
       "settings": {
         "title": "<strong>What Do Our Customers Say</strong>",
@@ -274,9 +275,9 @@
         "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36,
-        "testimonial_section_background": "#f8efd9",
+        "testimonial_section_background": "#fffbe8",
         "testimonial_background": "#ffffff",
-        "testimonial_title_color": "#206613",
+        "testimonial_title_color": "#00584b",
         "testimonials_text_color": "#000000",
         "arrow_color": "#5d5f66",
         "arrow_bg_color": "rgba(0,0,0,0)",
@@ -308,11 +309,11 @@
         "title-setting": "Looking to buy in bulk?",
         "description-setting": "Our wholesale team is available and will assist you during the process.",
         "button-title-setting": "Get in touch",
-        "background-color": "#206613",
+        "background-color": "#00584b",
         "heading-color": "#ffffff",
         "description-color": "#ffffff",
         "button-bg-color": "#ffffff",
-        "button-text-color": "#206613"
+        "button-text-color": "#00584b"
       }
     },
     "social_media_images_home_section_rKWm9b": {
@@ -395,7 +396,7 @@
         "title_settings": "Join Us On Social Media",
         "description_settings": "Health Tips, Recipes & More",
         "background_color_settings": "#fcfcfc",
-        "title_color_settings": "#206613",
+        "title_color_settings": "#00584b",
         "description_color_settings": "#000000"
       }
     },
